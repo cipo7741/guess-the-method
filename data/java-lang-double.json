@@ -1,0 +1,98 @@
+[
+    {
+        "Modifier and Type": "byte",
+        "Method": "byteValue",
+        "Arguments": "()",
+        "Description": "Returns the value of this Double as a byte "
+    },
+    {
+        "Modifier and Type": "int",
+        "Method": "compareTo",
+        "Arguments": "(Double anotherDouble)",
+        "Description": "Compares two Double objects numerically."
+    },
+    {
+        "Modifier and Type": "static long",
+        "Method": "doubleToLongBits",
+        "Arguments": "(double value)",
+        "Description": "Returns a representation of the specified floating-point value according to the IEEE 754 floating-point "
+    },
+    {
+        "Modifier and Type": "static long",
+        "Method": "doubleToRawLongBits",
+        "Arguments": "(double value)",
+        "Description": "Returns a representation of the specified floating-point value according to the IEEE 754 floating-point "
+    },
+    {
+        "Modifier and Type": "boolean",
+        "Method": "equals",
+        "Arguments": "(Object obj)",
+        "Description": "Compares this object against the specified object."
+    },
+    {
+        "Modifier and Type": "float",
+        "Method": "floatValue",
+        "Arguments": "()",
+        "Description": "Returns the float value of this Double object."
+    },
+    {
+        "Modifier and Type": "int",
+        "Method": "hashCode",
+        "Arguments": "()",
+        "Description": "Returns a hash code for this Double object."
+    },
+    {
+        "Modifier and Type": "int",
+        "Method": "intValue",
+        "Arguments": "()",
+        "Description": "Returns the value of this Double as an int "
+    },
+    {
+        "Modifier and Type": "static boolean",
+        "Method": "isInfinite",
+        "Arguments": "(double v)",
+        "Description": "Returns true if the specified number is infinitely large in magnitude"
+    },
+    {
+        "Modifier and Type": "boolean",
+        "Method": "isNaN",
+        "Arguments": "()",
+        "Description": "Returns true if this Double value is a Not-a-Number "
+    },
+    {
+        "Modifier and Type": "long",
+        "Method": "longValue",
+        "Arguments": "()",
+        "Description": "Returns the value of this Double as a long "
+    },
+    {
+        "Modifier and Type": "short",
+        "Method": "shortValue",
+        "Arguments": "()",
+        "Description": "Returns the value of this Double as a short "
+    },
+    {
+        "Modifier and Type": "String",
+        "Method": "toString",
+        "Arguments": "()",
+        "Description": "Returns a string representation of this Double object."
+    },
+    {
+        "Modifier and Type": "static String",
+        "Method": "toString",
+        "Arguments": "(double d)",
+        "Description": "Returns a string representation of the double argument."
+    },
+    {
+        "Modifier and Type": "static Double",
+        "Method": "valueOf",
+        "Arguments": "(double d)",
+        "Description": "Returns a Double instance representing the specified double value."
+    },
+    {
+        "Modifier and Type": "static Double",
+        "Method": "valueOf",
+        "Arguments": "(String s)",
+        "Description": "Returns a Double object holding the double value represented by the argument string s."
+    }
+]

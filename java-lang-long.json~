@@ -1,0 +1,47 @@
+Modifier and Type,Method,Arguments,Description
+byte	byteValue()
+Returns the value of this Double as a byte (by casting to a byte).
+static int	compare(double d1, double d2)
+Compares the two specified double values.
+int	compareTo(Double anotherDouble)
+Compares two Double objects numerically.
+static long	doubleToLongBits(double value)
+Returns a representation of the specified floating-point value according to the IEEE 754 floating-point "double format" bit layout.
+static long	doubleToRawLongBits(double value)
+Returns a representation of the specified floating-point value according to the IEEE 754 floating-point "double format" bit layout, preserving Not-a-Number (NaN) values.
+double	doubleValue()
+Returns the double value of this Double object.
+boolean	equals(Object obj)
+Compares this object against the specified object.
+float	floatValue()
+Returns the float value of this Double object.
+int	hashCode()
+Returns a hash code for this Double object.
+int	intValue()
+Returns the value of this Double as an int (by casting to type int).
+boolean	isInfinite()
+Returns true if this Double value is infinitely large in magnitude, false otherwise.
+static boolean	isInfinite(double v)
+Returns true if the specified number is infinitely large in magnitude, false otherwise.
+boolean	isNaN()
+Returns true if this Double value is a Not-a-Number (NaN), false otherwise.
+static boolean	isNaN(double v)
+Returns true if the specified number is a Not-a-Number (NaN) value, false otherwise.
+static double	longBitsToDouble(long bits)
+Returns the double value corresponding to a given bit representation.
+long	longValue()
+Returns the value of this Double as a long (by casting to type long).
+static double	parseDouble(String s)
+Returns a new double initialized to the value represented by the specified String, as performed by the valueOf method of class Double.
+short	shortValue()
+Returns the value of this Double as a short (by casting to a short).
+static String	toHexString(double d)
+Returns a hexadecimal string representation of the double argument.
+String	toString()
+Returns a string representation of this Double object.
+static String	toString(double d)
+Returns a string representation of the double argument.
+static Double	valueOf(double d)
+Returns a Double instance representing the specified double value.
+static Double	valueOf(String s)
+Returns a Double object holding the double value represented by the argument string s.

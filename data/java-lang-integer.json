@@ -1,0 +1,212 @@
+[
+    {
+        "Modifier and Type": "static int",
+        "Method": "bitCount",
+        "Arguments": "(int i)",
+        "Description": "Returns the number of one-bits in the two's complement binary representation of the specified int value."
+    },
+    {
+        "Modifier and Type": "byte",
+        "Method": "byteValue",
+        "Arguments": "()",
+        "Description": "Returns the value of this Integer as a byte."
+    },
+    {
+        "Modifier and Type": "static int",
+        "Method": "compare",
+        "Arguments": "(int x, int y)",
+        "Description": "Compares two int values numerically."
+    },
+    {
+        "Modifier and Type": "int",
+        "Method": "compareTo",
+        "Arguments": "(Integer anotherInteger)",
+        "Description": "Compares two Integer objects numerically."
+    },
+    {
+        "Modifier and Type": "static Integer",
+        "Method": "decode",
+        "Arguments": "(String nm)",
+        "Description": "Decodes a String into an Integer."
+    },
+    {
+        "Modifier and Type": "double",
+        "Method": "doubleValue",
+        "Arguments": "()",
+        "Description": "Returns the value of this Integer as a double."
+    },
+    {
+        "Modifier and Type": "boolean",
+        "Method": "equals",
+        "Arguments": "(Object obj)",
+        "Description": "Compares this object to the specified object."
+    },
+    {
+        "Modifier and Type": "float",
+        "Method": "floatValue",
+        "Arguments": "()",
+        "Description": "Returns the value of this Integer as a float."
+    },
+    {
+        "Modifier and Type": "static Integer",
+        "Method": "getInteger",
+        "Arguments": "(String nm)",
+        "Description": "Determines the integer value of the system property with the specified name."
+    },
+    {
+        "Modifier and Type": "static Integer",
+        "Method": "getInteger",
+        "Arguments": "(String nm, int val)",
+        "Description": "Determines the integer value of the system property with the specified name."
+    },
+    {
+        "Modifier and Type": "static Integer",
+        "Method": "getInteger",
+        "Arguments": "(String nm, Integer val)",
+        "Description": "Returns the integer value of the system property with the specified name."
+    },
+    {
+        "Modifier and Type": "int",
+        "Method": "hashCode",
+        "Arguments": "()",
+        "Description": "Returns a hash code for this Integer."
+    },
+    {
+        "Modifier and Type": "static int",
+        "Method": "highestOneBit",
+        "Arguments": "(int i)",
+        "Description": "Returns an int value with at most a single one-bit"
+    },
+    {
+        "Modifier and Type": "int",
+        "Method": "intValue",
+        "Arguments": "()",
+        "Description": "Returns the value of this Integer as an int."
+    },
+    {
+        "Modifier and Type": "long",
+        "Method": "longValue",
+        "Arguments": "()",
+        "Description": "Returns the value of this Integer as a long."
+    },
+    {
+        "Modifier and Type": "static int",
+        "Method": "lowestOneBit",
+        "Arguments": "(int i)",
+        "Description": "Returns an int value with at most a single one-bit"
+    },
+    {
+        "Modifier and Type": "static int",
+        "Method": "numberOfLeadingZeros",
+        "Arguments": "(int i)",
+        "Description": "Returns the number of zero bits preceding the highest-order "
+    },
+    {
+        "Modifier and Type": "static int",
+        "Method": "numberOfTrailingZeros",
+        "Arguments": "(int i)",
+        "Description": "Returns the number of zero bits following the lowest-order "
+    },
+    {
+        "Modifier and Type": "static int",
+        "Method": "parseInt",
+        "Arguments": "(String s)",
+        "Description": "Parses the string argument as a signed decimal integer."
+    },
+    {
+        "Modifier and Type": "static int",
+        "Method": "parseInt",
+        "Arguments": "(String s, int radix)",
+        "Description": "Parses the string argument as a signed integer in the radix specified by the second argument."
+    },
+    {
+        "Modifier and Type": "static int",
+        "Method": "reverse",
+        "Arguments": "(int i)",
+        "Description": "Returns the value obtained by reversing the order of the bits in the two's complement binary representation of the specified int value."
+    },
+    {
+        "Modifier and Type": "static int",
+        "Method": "reverseBytes",
+        "Arguments": "(int i)",
+        "Description": "Returns the value obtained by reversing the order of the bytes in the two's complement representation of the specified int value."
+    },
+    {
+        "Modifier and Type": "static int",
+        "Method": "rotateLeft",
+        "Arguments": "(int i, int distance)",
+        "Description": "Returns the value obtained by rotating the two's complement binary representation of the specified int value left by the specified number of bits."
+    },
+    {
+        "Modifier and Type": "static int",
+        "Method": "rotateRight",
+        "Arguments": "(int i, int distance)",
+        "Description": "Returns the value obtained by rotating the two's complement binary representation of the specified int value right by the specified number of bits."
+    },
+    {
+        "Modifier and Type": "short",
+        "Method": "shortValue",
+        "Arguments": "()",
+        "Description": "Returns the value of this Integer as a short."
+    },
+    {
+        "Modifier and Type": "static int",
+        "Method": "signum",
+        "Arguments": "(int i)",
+        "Description": "Returns the signum function of the specified int value."
+    },
+    {
+        "Modifier and Type": "static String",
+        "Method": "toBinaryString",
+        "Arguments": "(int i)",
+        "Description": "Returns a string representation of the integer argument as an unsigned integer in base 2."
+    },
+    {
+        "Modifier and Type": "static String",
+        "Method": "toHexString",
+        "Arguments": "(int i)",
+        "Description": "Returns a string representation of the integer argument as an unsigned integer in base 16."
+    },
+    {
+        "Modifier and Type": "static String",
+        "Method": "toOctalString",
+        "Arguments": "(int i)",
+        "Description": "Returns a string representation of the integer argument as an unsigned integer in base 8."
+    },
+    {
+        "Modifier and Type": "String",
+        "Method": "toString",
+        "Arguments": "()",
+        "Description": "Returns a String object representing this Integer's value."
+    },
+    {
+        "Modifier and Type": "static String",
+        "Method": "toString",
+        "Arguments": "(int i)",
+        "Description": "Returns a String object representing the specified integer."
+    },
+    {
+        "Modifier and Type": "static String",
+        "Method": "toString",
+        "Arguments": "(int i, int radix)",
+        "Description": "Returns a string representation of the first argument in the radix specified by the second argument."
+    },
+    {
+        "Modifier and Type": "static Integer",
+        "Method": "valueOf",
+        "Arguments": "(int i)",
+        "Description": "Returns an Integer instance representing the specified int value."
+    },
+    {
+        "Modifier and Type": "static Integer",
+        "Method": "valueOf",
+        "Arguments": "(String s)",
+        "Description": "Returns an Integer object holding the value of the specified String."
+    },
+    {
+        "Modifier and Type": "static Integer",
+        "Method": "valueOf",
+        "Arguments": "(String s, int radix)",
+        "Description": "Returns an Integer object holding the value extracted from the specified String when parsed with the radix given by the second argument."
+    }
+]

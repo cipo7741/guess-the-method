@@ -1,0 +1,326 @@
+[
+    {
+        "Modifier and Type": "static double",
+        "Method": "abs",
+        "Arguments": "(double a)",
+        "Description": "Returns the absolute value of a double value."
+    },
+    {
+        "Modifier and Type": "static float",
+        "Method": "abs",
+        "Arguments": "(float a)",
+        "Description": "Returns the absolute value of a float value."
+    },
+    {
+        "Modifier and Type": "static int",
+        "Method": "abs",
+        "Arguments": "(int a)",
+        "Description": "Returns the absolute value of an int value."
+    },
+    {
+        "Modifier and Type": "static long",
+        "Method": "abs",
+        "Arguments": "(long a)",
+        "Description": "Returns the absolute value of a long value."
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "acos",
+        "Arguments": "(double a)",
+        "Description": "Returns the arc cosine of a value; the returned angle is in the range 0.0 through pi."
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "asin",
+        "Arguments": "(double a)",
+        "Description": "Returns the arc sine of a value; the returned angle is in the range -pi/2 through pi/2."
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "atan",
+        "Arguments": "(double a)",
+        "Description": "Returns the arc tangent of a value; the returned angle is in the range -pi/2 through pi/2."
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "atan2",
+        "Arguments": "(double y, double x)",
+        "Description": "Returns the angle theta from the conversion of rectangular coordinates "
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "cbrt",
+        "Arguments": "(double a)",
+        "Description": "Returns the cube root of a double value."
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "ceil",
+        "Arguments": "(double a)",
+        "Description": "Returns the smallest "
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "copySign",
+        "Arguments": "(double magnitude, double sign)",
+        "Description": "Returns the first floating-point argument with the sign of the second floating-point argument."
+    },
+    {
+        "Modifier and Type": "static float",
+        "Method": "copySign",
+        "Arguments": "(float magnitude, float sign)",
+        "Description": "Returns the first floating-point argument with the sign of the second floating-point argument."
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "cos",
+        "Arguments": "(double a)",
+        "Description": "Returns the trigonometric cosine of an angle."
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "cosh",
+        "Arguments": "(double x)",
+        "Description": "Returns the hyperbolic cosine of a double value."
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "exp",
+        "Arguments": "(double a)",
+        "Description": "Returns Euler's number e raised to the power of a double value."
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "expm1",
+        "Arguments": "(double x)",
+        "Description": "Returns ex -1."
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "floor",
+        "Arguments": "(double a)",
+        "Description": "Returns the largest "
+    },
+    {
+        "Modifier and Type": "static int",
+        "Method": "getExponent",
+        "Arguments": "(double d)",
+        "Description": "Returns the unbiased exponent used in the representation of a double."
+    },
+    {
+        "Modifier and Type": "static int",
+        "Method": "getExponent",
+        "Arguments": "(float f)",
+        "Description": "Returns the unbiased exponent used in the representation of a float."
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "hypot",
+        "Arguments": "(double x, double y)",
+        "Description": "Returns sqrt"
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "IEEEremainder",
+        "Arguments": "(double f1, double f2)",
+        "Description": "Computes the remainder operation on two arguments as prescribed by the IEEE 754 standard."
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "log",
+        "Arguments": "(double a)",
+        "Description": "Returns the natural logarithm "
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "log10",
+        "Arguments": "(double a)",
+        "Description": "Returns the base 10 logarithm of a double value."
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "log1p",
+        "Arguments": "(double x)",
+        "Description": "Returns the natural logarithm of the sum of the argument and 1."
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "max",
+        "Arguments": "(double a, double b)",
+        "Description": "Returns the greater of two double values."
+    },
+    {
+        "Modifier and Type": "static float",
+        "Method": "max",
+        "Arguments": "(float a, float b)",
+        "Description": "Returns the greater of two float values."
+    },
+    {
+        "Modifier and Type": "static int",
+        "Method": "max",
+        "Arguments": "(int a, int b)",
+        "Description": "Returns the greater of two int values."
+    },
+    {
+        "Modifier and Type": "static long",
+        "Method": "max",
+        "Arguments": "(long a, long b)",
+        "Description": "Returns the greater of two long values."
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "min",
+        "Arguments": "(double a, double b)",
+        "Description": "Returns the smaller of two double values."
+    },
+    {
+        "Modifier and Type": "static float",
+        "Method": "min",
+        "Arguments": "(float a, float b)",
+        "Description": "Returns the smaller of two float values."
+    },
+    {
+        "Modifier and Type": "static int",
+        "Method": "min",
+        "Arguments": "(int a, int b)",
+        "Description": "Returns the smaller of two int values."
+    },
+    {
+        "Modifier and Type": "static long",
+        "Method": "min",
+        "Arguments": "(long a, long b)",
+        "Description": "Returns the smaller of two long values."
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "nextAfter",
+        "Arguments": "(double start, double direction)",
+        "Description": "Returns the floating-point number adjacent to the first argument in the direction of the second argument."
+    },
+    {
+        "Modifier and Type": "static float",
+        "Method": "nextAfter",
+        "Arguments": "(float start, double direction)",
+        "Description": "Returns the floating-point number adjacent to the first argument in the direction of the second argument."
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "nextUp",
+        "Arguments": "(double d)",
+        "Description": "Returns the floating-point value adjacent to d in the direction of positive infinity."
+    },
+    {
+        "Modifier and Type": "static float",
+        "Method": "nextUp",
+        "Arguments": "(float f)",
+        "Description": "Returns the floating-point value adjacent to f in the direction of positive infinity."
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "pow",
+        "Arguments": "(double a, double b)",
+        "Description": "Returns the value of the first argument raised to the power of the second argument."
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "random",
+        "Arguments": "()",
+        "Description": "Returns a double value with a positive sign"
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "rint",
+        "Arguments": "(double a)",
+        "Description": "Returns the double value that is closest in value to the argument and is equal to a mathematical integer."
+    },
+    {
+        "Modifier and Type": "static long",
+        "Method": "round",
+        "Arguments": "(double a)",
+        "Description": "Returns the closest long to the argument"
+    },
+    {
+        "Modifier and Type": "static int",
+        "Method": "round",
+        "Arguments": "(float a)",
+        "Description": "Returns the closest int to the argument"
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "scalb",
+        "Arguments": "(double d, int scaleFactor)",
+        "Description": "Return d × 2scaleFactor rounded as if performed by a single correctly rounded floating-point multiply to a member of the double value set."
+    },
+    {
+        "Modifier and Type": "static float",
+        "Method": "scalb",
+        "Arguments": "(float f, int scaleFactor)",
+        "Description": "Return f × 2scaleFactor rounded as if performed by a single correctly rounded floating-point multiply to a member of the float value set."
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "signum",
+        "Arguments": "(double d)",
+        "Description": "Returns the signum function of the argument; zero if the argument is zero"
+    },
+    {
+        "Modifier and Type": "static float",
+        "Method": "signum",
+        "Arguments": "(float f)",
+        "Description": "Returns the signum function of the argument; zero if the argument is zero"
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "sin",
+        "Arguments": "(double a)",
+        "Description": "Returns the trigonometric sine of an angle."
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "sinh",
+        "Arguments": "(double x)",
+        "Description": "Returns the hyperbolic sine of a double value."
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "sqrt",
+        "Arguments": "(double a)",
+        "Description": "Returns the correctly rounded positive square root of a double value."
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "tan",
+        "Arguments": "(double a)",
+        "Description": "Returns the trigonometric tangent of an angle."
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "tanh",
+        "Arguments": "(double x)",
+        "Description": "Returns the hyperbolic tangent of a double value."
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "toDegrees",
+        "Arguments": "(double angrad)",
+        "Description": "Converts an angle measured in radians to an approximately equivalent angle measured in degrees."
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "toRadians",
+        "Arguments": "(double angdeg)",
+        "Description": "Converts an angle measured in degrees to an approximately equivalent angle measured in radians."
+    },
+    {
+        "Modifier and Type": "static double",
+        "Method": "ulp",
+        "Arguments": "(double d)",
+        "Description": "Returns the size of an ulp of the argument."
+    },
+    {
+        "Modifier and Type": "static float",
+        "Method": "ulp",
+        "Arguments": "(float f)",
+        "Description": "Returns the size of an ulp of the argument."
+    }
+]

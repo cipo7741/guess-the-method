@@ -1,0 +1,212 @@
+[
+    {
+        "Modifier and Type": "static int",
+        "Method": "bitCount",
+        "Arguments": "(long i)",
+        "Description": "Returns the number of one-bits in the two's complement binary representation of the specified long value."
+    },
+    {
+        "Modifier and Type": "byte",
+        "Method": "byteValue",
+        "Arguments": "()",
+        "Description": "Returns the value of this Long as a byte."
+    },
+    {
+        "Modifier and Type": "static int",
+        "Method": "compare",
+        "Arguments": "(long x, long y)",
+        "Description": "Compares two long values numerically."
+    },
+    {
+        "Modifier and Type": "int",
+        "Method": "compareTo",
+        "Arguments": "(Long anotherLong)",
+        "Description": "Compares two Long objects numerically."
+    },
+    {
+        "Modifier and Type": "static Long",
+        "Method": "decode",
+        "Arguments": "(String nm)",
+        "Description": "Decodes a String into a Long."
+    },
+    {
+        "Modifier and Type": "double",
+        "Method": "doubleValue",
+        "Arguments": "()",
+        "Description": "Returns the value of this Long as a double."
+    },
+    {
+        "Modifier and Type": "boolean",
+        "Method": "equals",
+        "Arguments": "(Object obj)",
+        "Description": "Compares this object to the specified object."
+    },
+    {
+        "Modifier and Type": "float",
+        "Method": "floatValue",
+        "Arguments": "()",
+        "Description": "Returns the value of this Long as a float."
+    },
+    {
+        "Modifier and Type": "static Long",
+        "Method": "getLong",
+        "Arguments": "(String nm)",
+        "Description": "Determines the long value of the system property with the specified name."
+    },
+    {
+        "Modifier and Type": "static Long",
+        "Method": "getLong",
+        "Arguments": "(String nm, long val)",
+        "Description": "Determines the long value of the system property with the specified name."
+    },
+    {
+        "Modifier and Type": "static Long",
+        "Method": "getLong",
+        "Arguments": "(String nm, Long val)",
+        "Description": "Returns the long value of the system property with the specified name."
+    },
+    {
+        "Modifier and Type": "int",
+        "Method": "hashCode",
+        "Arguments": "()",
+        "Description": "Returns a hash code for this Long."
+    },
+    {
+        "Modifier and Type": "static long",
+        "Method": "highestOneBit",
+        "Arguments": "(long i)",
+        "Description": "Returns a long value with at most a single one-bit"
+    },
+    {
+        "Modifier and Type": "int",
+        "Method": "intValue",
+        "Arguments": "()",
+        "Description": "Returns the value of this Long as an int."
+    },
+    {
+        "Modifier and Type": "long",
+        "Method": "longValue",
+        "Arguments": "()",
+        "Description": "Returns the value of this Long as a long value."
+    },
+    {
+        "Modifier and Type": "static long",
+        "Method": "lowestOneBit",
+        "Arguments": "(long i)",
+        "Description": "Returns a long value with at most a single one-bit"
+    },
+    {
+        "Modifier and Type": "static int",
+        "Method": "numberOfLeadingZeros",
+        "Arguments": "(long i)",
+        "Description": "Returns the number of zero bits preceding the highest-order "
+    },
+    {
+        "Modifier and Type": "static int",
+        "Method": "numberOfTrailingZeros",
+        "Arguments": "(long i)",
+        "Description": "Returns the number of zero bits following the lowest-order "
+    },
+    {
+        "Modifier and Type": "static long",
+        "Method": "parseLong",
+        "Arguments": "(String s)",
+        "Description": "Parses the string argument as a signed decimal long."
+    },
+    {
+        "Modifier and Type": "static long",
+        "Method": "parseLong",
+        "Arguments": "(String s, int radix)",
+        "Description": "Parses the string argument as a signed long in the radix specified by the second argument."
+    },
+    {
+        "Modifier and Type": "static long",
+        "Method": "reverse",
+        "Arguments": "(long i)",
+        "Description": "Returns the value obtained by reversing the order of the bits in the two's complement binary representation of the specified long value."
+    },
+    {
+        "Modifier and Type": "static long",
+        "Method": "reverseBytes",
+        "Arguments": "(long i)",
+        "Description": "Returns the value obtained by reversing the order of the bytes in the two's complement representation of the specified long value."
+    },
+    {
+        "Modifier and Type": "static long",
+        "Method": "rotateLeft",
+        "Arguments": "(long i, int distance)",
+        "Description": "Returns the value obtained by rotating the two's complement binary representation of the specified long value left by the specified number of bits."
+    },
+    {
+        "Modifier and Type": "static long",
+        "Method": "rotateRight",
+        "Arguments": "(long i, int distance)",
+        "Description": "Returns the value obtained by rotating the two's complement binary representation of the specified long value right by the specified number of bits."
+    },
+    {
+        "Modifier and Type": "short",
+        "Method": "shortValue",
+        "Arguments": "()",
+        "Description": "Returns the value of this Long as a short."
+    },
+    {
+        "Modifier and Type": "static int",
+        "Method": "signum",
+        "Arguments": "(long i)",
+        "Description": "Returns the signum function of the specified long value."
+    },
+    {
+        "Modifier and Type": "static String",
+        "Method": "toBinaryString",
+        "Arguments": "(long i)",
+        "Description": "Returns a string representation of the long argument as an unsigned integer in base 2."
+    },
+    {
+        "Modifier and Type": "static String",
+        "Method": "toHexString",
+        "Arguments": "(long i)",
+        "Description": "Returns a string representation of the long argument as an unsigned integer in base 16."
+    },
+    {
+        "Modifier and Type": "static String",
+        "Method": "toOctalString",
+        "Arguments": "(long i)",
+        "Description": "Returns a string representation of the long argument as an unsigned integer in base 8."
+    },
+    {
+        "Modifier and Type": "String",
+        "Method": "toString",
+        "Arguments": "()",
+        "Description": "Returns a String object representing this Long's value."
+    },
+    {
+        "Modifier and Type": "static String",
+        "Method": "toString",
+        "Arguments": "(long i)",
+        "Description": "Returns a String object representing the specified long."
+    },
+    {
+        "Modifier and Type": "static String",
+        "Method": "toString",
+        "Arguments": "(long i, int radix)",
+        "Description": "Returns a string representation of the first argument in the radix specified by the second argument."
+    },
+    {
+        "Modifier and Type": "static Long",
+        "Method": "valueOf",
+        "Arguments": "(long l)",
+        "Description": "Returns a Long instance representing the specified long value."
+    },
+    {
+        "Modifier and Type": "static Long",
+        "Method": "valueOf",
+        "Arguments": "(String s)",
+        "Description": "Returns a Long object holding the value of the specified String."
+    },
+    {
+        "Modifier and Type": "static Long",
+        "Method": "valueOf",
+        "Arguments": "(String s, int radix)",
+        "Description": "Returns a Long object holding the value extracted from the specified String when parsed with the radix given by the second argument."
+    }
+]
