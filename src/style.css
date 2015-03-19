@@ -1,0 +1,68 @@
+/*******************************************************************
+LAYOUT
+*******************************************************************/
+
+h1, h2, h3 {
+	text-align: center
+}
+
+div {
+	text-align: center
+}
+div.result {
+	heigth: 200 px;
+}
+
+p {
+	font-weight: bold;
+    font-size: 22px;
+}
+/*******************************************************************
+LINKS
+*******************************************************************/
+a {  text-decoration: none; }
+a:link { color: #3498db }
+a:visited { color: #3498db }
+a:hover { color: #aaa }
+a:active { color: #3498db }
+
+/*******************************************************************
+FORMS
+*******************************************************************/
+
+form { }
+#form { }
+input[type="text"] {
+	font-family: monospace;
+	letter-spacing: 0.08em;
+	font-size: 22px;
+	background: url(../media/dashes-to-dashes-transparent.png) transparent 0 22px repeat-x;
+	border-style: none;
+}
+input[type="text"]:active {
+	border: none;
+}
+
+input[type="submit"] {
+background: none repeat scroll 0% 0% #3498DB;
+color: #ffffff;
+font-family: Georgia;
+font-size: 22px;
+border: medium none;
+border-radius: 6px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+padding-right: 10px;
+padding-left: 10px;
+padding-bottom: 4px;
+margin-left: 10px; 
+}
+
+input[type="submit"]:hover {
+  background: #aaa;
+  text-decoration: none;
+}
+
+textarea:focus, input:focus{
+    outline: 0;
+}

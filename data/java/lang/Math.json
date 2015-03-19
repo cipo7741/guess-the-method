@@ -249,13 +249,13 @@
         "Modifier and Type": "static double",
         "Method": "scalb",
         "Arguments": "(double d, int scaleFactor)",
-        "Description": "Return d × 2scaleFactor rounded as if performed by a single correctly rounded floating-point multiply to a member of the double value set."
+        "Description": "Return d × 2 ^ scaleFactor rounded as if performed by a single correctly rounded floating-point multiply to a member of the double value set."
     },
     {
         "Modifier and Type": "static float",
         "Method": "scalb",
         "Arguments": "(float f, int scaleFactor)",
-        "Description": "Return f × 2scaleFactor rounded as if performed by a single correctly rounded floating-point multiply to a member of the float value set."
+        "Description": "Return f × 2 ^ scaleFactor rounded as if performed by a single correctly rounded floating-point multiply to a member of the float value set."
     },
     {
         "Modifier and Type": "static double",
