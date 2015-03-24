@@ -70,10 +70,10 @@ var method, jsonData;
   };
 
   $(document).keypress(function(e) {
-    if(e.which == 13) {
+    if(e.which == 13 && isCorrect()) {
       check();
-    } else if (e.which == 32 && isCorrect()) {
-      console.log(e.which);
       newQuest(jsonData);
+    } else if (e.which == 13) {
+      check();
     }
 });
