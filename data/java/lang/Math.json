@@ -45,7 +45,7 @@
         "Modifier and Type": "static double",
         "Method": "atan2",
         "Arguments": "(double y, double x)",
-        "Description": "Returns the angle theta from the conversion of rectangular coordinates "
+        "Description": "Returns the angle theta from the conversion of rectangular coordinates (x, y) to polar coordinates (r, theta)."
     },
     {
         "Modifier and Type": "static double",
@@ -57,7 +57,7 @@
         "Modifier and Type": "static double",
         "Method": "ceil",
         "Arguments": "(double a)",
-        "Description": "Returns the smallest "
+        "Description": "Returns the smallest (closest to negative infinity) double value that is greater than or equal to the argument and is equal to a mathematical integer."
     },
     {
         "Modifier and Type": "static double",
@@ -99,7 +99,7 @@
         "Modifier and Type": "static double",
         "Method": "floor",
         "Arguments": "(double a)",
-        "Description": "Returns the largest "
+        "Description": "Returns the largest (closest to positive infinity) double value that is less than or equal to the argument and is equal to a mathematical integer."
     },
     {
         "Modifier and Type": "static int",
@@ -117,7 +117,7 @@
         "Modifier and Type": "static double",
         "Method": "hypot",
         "Arguments": "(double x, double y)",
-        "Description": "Returns sqrt"
+        "Description": "Returns sqrt (x^2 + y^2) without intermediate overflow or underflow."
     },
     {
         "Modifier and Type": "static double",
@@ -129,7 +129,7 @@
         "Modifier and Type": "static double",
         "Method": "log",
         "Arguments": "(double a)",
-        "Description": "Returns the natural logarithm "
+        "Description": "Returns the natural logarithm (base e) of a double value."
     },
     {
         "Modifier and Type": "static double",
@@ -225,7 +225,7 @@
         "Modifier and Type": "static double",
         "Method": "random",
         "Arguments": "()",
-        "Description": "Returns a double value with a positive sign"
+        "Description": "Returns a double value with a positive sign, greater than or equal to 0.0 and less than 1.0."
     },
     {
         "Modifier and Type": "static double",
@@ -237,13 +237,13 @@
         "Modifier and Type": "static long",
         "Method": "round",
         "Arguments": "(double a)",
-        "Description": "Returns the closest long to the argument"
+        "Description": "Returns the closest long to the argument, with ties rounding up."
     },
     {
         "Modifier and Type": "static int",
         "Method": "round",
         "Arguments": "(float a)",
-        "Description": "Returns the closest int to the argument"
+        "Description": "Returns the closest int to the argument, with ties rounding up."
     },
     {
         "Modifier and Type": "static double",
@@ -261,13 +261,13 @@
         "Modifier and Type": "static double",
         "Method": "signum",
         "Arguments": "(double d)",
-        "Description": "Returns the signum function of the argument; zero if the argument is zero"
+        "Description": "Returns the signum function of the argument; zero if the argument is zero, 1.0 if the argument is greater than zero, -1.0 if the argument is less than zero."
     },
     {
         "Modifier and Type": "static float",
         "Method": "signum",
         "Arguments": "(float f)",
-        "Description": "Returns the signum function of the argument; zero if the argument is zero"
+        "Description": "Returns the signum function of the argument; zero if the argument is zero, 1.0f if the argument is greater than zero, -1.0f if the argument is less than zero."
     },
     {
         "Modifier and Type": "static double",

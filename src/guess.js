@@ -28,6 +28,7 @@ var method, jsonData;
       guessInput.setAttribute('id', 'guessInput');
       guessInput.setAttribute('maxlength', arr[i].Method.length);
       guessInput.setAttribute('style', 'width: calc(15px *' + arr[i].Method.length +');');
+      guessInput.setAttribute('autofocus', 'autofocus');
       guessInput = new XMLSerializer().serializeToString(guessInput)
       var guessSubmit = document.createElement("input");
       guessSubmit.setAttribute('type', 'submit');
