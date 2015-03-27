@@ -1,21 +1,53 @@
 /*******************************************************************
 LAYOUT
 *******************************************************************/
+body {
+	position: relative;
+}
 
 h1, h2, h3 {
-	text-align: center
+	text-align: center;
+	font-family: monospace;
 }
+
+div#points {
+	position: absolute;
+	top: 5px;
+	width: 100px;
+	height: 70px;
+	margin-right: 50px;
+	right: 0;
+}
+
 
 div {
 	text-align: center
 }
-div.result {
-	heigth: 200 px;
+
+div#content {
+	margin-top: 100px;
 }
+
+/*div#points {
+	margin: 50px;
+	position: absolute;
+	right: 0;
+}*/
 
 p {
 	font-weight: bold;
     font-size: 22px;
+    font-family: monospace;
+}
+
+p#description {
+	margin-left: auto;
+    margin-right: auto;
+	width: 600px;
+}
+
+p#result {
+	margin: 22px;
 }
 /*******************************************************************
 LINKS

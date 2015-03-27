@@ -1,6 +1,11 @@
 var xmlhttp = new XMLHttpRequest();
-  var url = "data/java/lang/Math.json";
+var url = "data/java/lang/Math.json";
 var method, jsonData;
+var numPoints, numQuests, numTries;
+
+script = document.createElement("script");
+script.type = "text/javascript";
+script.src = url + "?callback=my_callback";
 
   function randomSeed(x) {
     return Math.floor((Math.random() * x));
@@ -8,6 +13,8 @@ var method, jsonData;
 
   xmlhttp.onreadystatechange = function() {
       if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          numPoints = 0;
+          numQuests = 0;
           jsonData = JSON.parse(xmlhttp.responseText);
           newQuest(jsonData);
       }
@@ -16,19 +23,21 @@ var method, jsonData;
   xmlhttp.send();
 
   function newQuest(arr){
+    numQuests += 1;
       i = randomSeed(arr.length)
       buildQuest(arr, i);
       method = arr[i].Method;
   }
 
   function buildQuest(arr, i) {
+      numTries = 3;
       document.getElementById("description").innerHTML = arr[i].Description;
       var guessInput = document.createElement("input");
       guessInput.setAttribute('type', 'text');
       guessInput.setAttribute('id', 'guessInput');
+      guessInput.setAttribute('class', 'focus');
       guessInput.setAttribute('maxlength', arr[i].Method.length);
       guessInput.setAttribute('style', 'width: calc(15px *' + arr[i].Method.length +');');
-      guessInput.setAttribute('autofocus', 'autofocus');
       guessInput = new XMLSerializer().serializeToString(guessInput)
       var guessSubmit = document.createElement("input");
       guessSubmit.setAttribute('type', 'submit');
@@ -38,14 +47,19 @@ var method, jsonData;
       guessSubmit = new XMLSerializer().serializeToString(guessSubmit)
       document.getElementById("guess").innerHTML = "java.lang.Math."
       document.getElementById("guess").innerHTML += guessInput + arr[i].Arguments + guessSubmit;
+      $("input.focus:last").focus();
+  }
+
+  countPoint = function() {
+    numPoints +=1;
   }
 
   timeoutResult = function() {
-    setTimeout('blankResult()', 2000);
+    setTimeout('blankResult()', 5000);
   }
 
   blankResult = function() {
-    return document.getElementById("result").innerHTML = "";
+    return document.getElementById("result").innerHTML = " ";
   }
 
   isCorrect = function() {
@@ -62,17 +76,24 @@ var method, jsonData;
   var text;
   if (isCorrect()) {
     text = "Correct";
-  } else {
+    numPoints += 1;
+    newQuest(jsonData);
+  } else if (numTries < 1) {
+    text = "Maybe this one?";
+    newQuest(jsonData);
+  }
+    else {
+    numTries -= 1;
     text = "Wrong, try again.";
   }
   timeoutResult();
-  return document.getElementById("result").innerHTML = text;
+  document.getElementById("count").innerHTML = numPoints + "/" + (numQuests - 1);
+  document.getElementById("result").innerHTML = text;
   };
 
   $(document).keypress(function(e) {
     if(e.which == 13 && isCorrect()) {
       check();
-      newQuest(jsonData);
     } else if (e.which == 13) {
       check();
     }
