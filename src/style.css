@@ -2,30 +2,29 @@
 LAYOUT
 *******************************************************************/
 body {
-	position: relative;
+    position: relative;
 }
 
 h1, h2, h3 {
-	text-align: center;
-	font-family: monospace;
+    text-align: center;
+    font-family: monospace;
 }
 
 div#points {
-	position: absolute;
-	top: 5px;
-	width: 100px;
-	height: 70px;
-	margin-right: 50px;
-	right: 0;
+    position: absolute;
+    top: 5px;
+    width: 100px;
+    height: 70px;
+    margin-right: 50px;
+    right: 0;
 }
 
-
 div {
-	text-align: center
+    text-align: center
 }
 
 div#content {
-	margin-top: 100px;
+    margin-top: 100px;
 }
 
 /*div#points {
@@ -35,66 +34,99 @@ div#content {
 }*/
 
 p {
-	font-weight: bold;
+    font-weight: bold;
     font-size: 22px;
     font-family: monospace;
 }
 
 p#description {
-	margin-left: auto;
+    margin-left: auto;
     margin-right: auto;
-	width: 600px;
+    width: 600px;
 }
 
 p#result {
-	margin: 22px;
+    margin: 22px;
 }
+
 /*******************************************************************
 LINKS
 *******************************************************************/
-a {  text-decoration: none; }
-a:link { color: #3498db }
-a:visited { color: #3498db }
-a:hover { color: #aaa }
-a:active { color: #3498db }
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: #3498db
+}
+
+a:visited {
+    color: #3498db
+}
+
+a:hover {
+    color: #aaa
+}
+
+a:active {
+    color: #3498db
+}
 
 /*******************************************************************
 FORMS
 *******************************************************************/
 
-form { }
-#form { }
-input[type="text"] {
-	font-family: monospace;
-	letter-spacing: 0.08em;
-	font-size: 22px;
-	background: url(../media/dashes-to-dashes-transparent.png) transparent 0 22px repeat-x;
-	border-style: none;
+form {
 }
+
+#form {
+}
+
+input[type="text"] {
+    font-family: monospace;
+    letter-spacing: 0.08em;
+    font-size: 22px;
+    background: url(../media/dashes-to-dashes-transparent.png) transparent 0 22px repeat-x;
+    border-style: none;
+}
+
 input[type="text"]:active {
-	border: none;
+    border: none;
 }
 
 input[type="submit"] {
-background: none repeat scroll 0% 0% #3498DB;
-color: #ffffff;
-font-family: Georgia;
-font-size: 22px;
-border: medium none;
-border-radius: 6px;
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
-padding-right: 10px;
-padding-left: 10px;
-padding-bottom: 4px;
-margin-left: 10px; 
+    background: none repeat scroll 0 0 #3498DB;
+    color: #ffffff;
+    font-family: Georgia, serif;
+    font-size: 22px;
+    border: medium none;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 4px;
+    margin-left: 10px;
 }
 
 input[type="submit"]:hover {
-  background: #aaa;
-  text-decoration: none;
+    background: #aaa;
+    text-decoration: none;
 }
 
-textarea:focus, input:focus{
+textarea:focus, input:focus {
     outline: 0;
+}
+
+select {
+    color: #3498DB;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 22px;
+    background: none;
+    border: 0 none;
+    outline:0;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
 }
