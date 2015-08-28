@@ -1,307 +1,307 @@
 [
     {
-        "Modifier and Type": "boolean",
-        "Method": "canExecute",
-        "Arguments": "()",
-        "Description": "Tests whether the application can execute the file denoted by this abstract pathname."
+        "type": "boolean",
+        "name": "canExecute",
+        "args": [],
+        "desc": "Tests whether the application can execute the file denoted by this abstract pathname."
     },
     {
-        "Modifier and Type": "boolean",
-        "Method": "canRead",
-        "Arguments": "()",
-        "Description": "Tests whether the application can read the file denoted by this abstract pathname."
+        "type": "boolean",
+        "name": "canRead",
+        "args": [],
+        "desc": "Tests whether the application can read the file denoted by this abstract pathname."
     },
     {
-        "Modifier and Type": "boolean",
-        "Method": "canWrite",
-        "Arguments": "()",
-        "Description": "Tests whether the application can modify the file denoted by this abstract pathname."
+        "type": "boolean",
+        "name": "canWrite",
+        "args": [],
+        "desc": "Tests whether the application can modify the file denoted by this abstract pathname."
     },
     {
-        "Modifier and Type": "int",
-        "Method": "compareTo",
-        "Arguments": "(File pathname)",
-        "Description": "Compares two abstract pathnames lexicographically."
+        "type": "int",
+        "name": "compareTo",
+        "args": ["File pathname"],
+        "desc": "Compares two abstract pathnames lexicographically."
     },
     {
-        "Modifier and Type": "boolean",
-        "Method": "createNewFile",
-        "Arguments": "()",
-        "Description": "Atomically creates a new"
+        "type": "boolean",
+        "name": "createNewFile",
+        "args": [],
+        "desc": "Atomically creates a new"
     },
     {
-        "Modifier and Type": "static File",
-        "Method": "createTempFile",
-        "Arguments": "(String prefix, String suffix)",
-        "Description": "Creates an empty file in the default temporary-file directory"
+        "type": "static File",
+        "name": "createTempFile",
+        "args": ["String prefix", "String suffix"],
+        "desc": "Creates an empty file in the default temporary-file directory"
     },
     {
-        "Modifier and Type": "static File",
-        "Method": "createTempFile",
-        "Arguments": "(String prefix, String suffix, File directory)",
-        "Description": "Creates a new empty file in the specified directory"
+        "type": "static File",
+        "name": "createTempFile",
+        "args": ["String prefix", "String suffix", "File directory"],
+        "desc": "Creates a new empty file in the specified directory"
     },
     {
-        "Modifier and Type": "boolean",
-        "Method": "delete",
-        "Arguments": "()",
-        "Description": "Deletes the file or directory denoted by this abstract pathname."
+        "type": "boolean",
+        "name": "delete",
+        "args": [],
+        "desc": "Deletes the file or directory denoted by this abstract pathname."
     },
     {
-        "Modifier and Type": "void",
-        "Method": "deleteOnExit",
-        "Arguments": "()",
-        "Description": "Requests that the file or directory denoted by this abstract pathname be deleted when the virtual machine terminates."
+        "type": "void",
+        "name": "deleteOnExit",
+        "args": [],
+        "desc": "Requests that the file or directory denoted by this abstract pathname be deleted when the virtual machine terminates."
     },
     {
-        "Modifier and Type": "boolean",
-        "Method": "equals",
-        "Arguments": "(Object obj)",
-        "Description": "Tests this abstract pathname for equality with the given object."
+        "type": "boolean",
+        "name": "equals",
+        "args": ["Object obj"],
+        "desc": "Tests this abstract pathname for equality with the given object."
     },
     {
-        "Modifier and Type": "boolean",
-        "Method": "exists",
-        "Arguments": "()",
-        "Description": "Tests whether the file or directory denoted by this abstract pathname exists."
+        "type": "boolean",
+        "name": "exists",
+        "args": [],
+        "desc": "Tests whether the file or directory denoted by this abstract pathname exists."
     },
     {
-        "Modifier and Type": "File",
-        "Method": "getAbsoluteFile",
-        "Arguments": "()",
-        "Description": "Returns the absolute form of this abstract pathname."
+        "type": "File",
+        "name": "getAbsoluteFile",
+        "args": [],
+        "desc": "Returns the absolute form of this abstract pathname."
     },
     {
-        "Modifier and Type": "String",
-        "Method": "getAbsolutePath",
-        "Arguments": "()",
-        "Description": "Returns the absolute pathname string of this abstract pathname."
+        "type": "String",
+        "name": "getAbsolutePath",
+        "args": [],
+        "desc": "Returns the absolute pathname string of this abstract pathname."
     },
     {
-        "Modifier and Type": "File",
-        "Method": "getCanonicalFile",
-        "Arguments": "()",
-        "Description": "Returns the canonical form of this abstract pathname."
+        "type": "File",
+        "name": "getCanonicalFile",
+        "args": [],
+        "desc": "Returns the canonical form of this abstract pathname."
     },
     {
-        "Modifier and Type": "String",
-        "Method": "getCanonicalPath",
-        "Arguments": "()",
-        "Description": "Returns the canonical pathname string of this abstract pathname."
+        "type": "String",
+        "name": "getCanonicalPath",
+        "args": [],
+        "desc": "Returns the canonical pathname string of this abstract pathname."
     },
     {
-        "Modifier and Type": "long",
-        "Method": "getFreeSpace",
-        "Arguments": "()",
-        "Description": "Returns the number of unallocated bytes in the partition named by this abstract path name."
+        "type": "long",
+        "name": "getFreeSpace",
+        "args": [],
+        "desc": "Returns the number of unallocated bytes in the partition named by this abstract path name."
     },
     {
-        "Modifier and Type": "String",
-        "Method": "getName",
-        "Arguments": "()",
-        "Description": "Returns the name of the file or directory denoted by this abstract pathname."
+        "type": "String",
+        "name": "getName",
+        "args": [],
+        "desc": "Returns the name of the file or directory denoted by this abstract pathname."
     },
     {
-        "Modifier and Type": "String",
-        "Method": "getParent",
-        "Arguments": "()",
-        "Description": "Returns the pathname string of this abstract pathname's parent"
+        "type": "String",
+        "name": "getParent",
+        "args": [],
+        "desc": "Returns the pathname string of this abstract pathname's parent"
     },
     {
-        "Modifier and Type": "File",
-        "Method": "getParentFile",
-        "Arguments": "()",
-        "Description": "Returns the abstract pathname of this abstract pathname's parent"
+        "type": "File",
+        "name": "getParentFile",
+        "args": [],
+        "desc": "Returns the abstract pathname of this abstract pathname's parent"
     },
     {
-        "Modifier and Type": "String",
-        "Method": "getPath",
-        "Arguments": "()",
-        "Description": "Converts this abstract pathname into a pathname string."
+        "type": "String",
+        "name": "getPath",
+        "args": [],
+        "desc": "Converts this abstract pathname into a pathname string."
     },
     {
-        "Modifier and Type": "long",
-        "Method": "getTotalSpace",
-        "Arguments": "()",
-        "Description": "Returns the size of the partition named by this abstract pathname."
+        "type": "long",
+        "name": "getTotalSpace",
+        "args": [],
+        "desc": "Returns the size of the partition named by this abstract pathname."
     },
     {
-        "Modifier and Type": "long",
-        "Method": "getUsableSpace",
-        "Arguments": "()",
-        "Description": "Returns the number of bytes available to this virtual machine on the partition named by this abstract pathname."
+        "type": "long",
+        "name": "getUsableSpace",
+        "args": [],
+        "desc": "Returns the number of bytes available to this virtual machine on the partition named by this abstract pathname."
     },
     {
-        "Modifier and Type": "int",
-        "Method": "hashCode",
-        "Arguments": "()",
-        "Description": "Computes a hash code for this abstract pathname."
+        "type": "int",
+        "name": "hashCode",
+        "args": [],
+        "desc": "Computes a hash code for this abstract pathname."
     },
     {
-        "Modifier and Type": "boolean",
-        "Method": "isAbsolute",
-        "Arguments": "()",
-        "Description": "Tests whether this abstract pathname is absolute."
+        "type": "boolean",
+        "name": "isAbsolute",
+        "args": [],
+        "desc": "Tests whether this abstract pathname is absolute."
     },
     {
-        "Modifier and Type": "boolean",
-        "Method": "isDirectory",
-        "Arguments": "()",
-        "Description": "Tests whether the file denoted by this abstract pathname is a directory."
+        "type": "boolean",
+        "name": "isDirectory",
+        "args": [],
+        "desc": "Tests whether the file denoted by this abstract pathname is a directory."
     },
     {
-        "Modifier and Type": "boolean",
-        "Method": "isFile",
-        "Arguments": "()",
-        "Description": "Tests whether the file denoted by this abstract pathname is a normal file."
+        "type": "boolean",
+        "name": "isFile",
+        "args": [],
+        "desc": "Tests whether the file denoted by this abstract pathname is a normal file."
     },
     {
-        "Modifier and Type": "boolean",
-        "Method": "isHidden",
-        "Arguments": "()",
-        "Description": "Tests whether the file named by this abstract pathname is a hidden file."
+        "type": "boolean",
+        "name": "isHidden",
+        "args": [],
+        "desc": "Tests whether the file named by this abstract pathname is a hidden file."
     },
     {
-        "Modifier and Type": "long",
-        "Method": "lastModified",
-        "Arguments": "()",
-        "Description": "Returns the time that the file denoted by this abstract pathname was last modified."
+        "type": "long",
+        "name": "lastModified",
+        "args": [],
+        "desc": "Returns the time that the file denoted by this abstract pathname was last modified."
     },
     {
-        "Modifier and Type": "long",
-        "Method": "length",
-        "Arguments": "()",
-        "Description": "Returns the length of the file denoted by this abstract pathname."
+        "type": "long",
+        "name": "length",
+        "args": [],
+        "desc": "Returns the length of the file denoted by this abstract pathname."
     },
     {
-        "Modifier and Type": "String[]",
-        "Method": "list",
-        "Arguments": "()",
-        "Description": "Returns an array of strings naming the files and directories in the directory denoted by this abstract pathname."
+        "type": "String[]",
+        "name": "list",
+        "args": [],
+        "desc": "Returns an array of strings naming the files and directories in the directory denoted by this abstract pathname."
     },
     {
-        "Modifier and Type": "String[]",
-        "Method": "list",
-        "Arguments": "(FilenameFilter filter)",
-        "Description": "Returns an array of strings naming the files and directories in the directory denoted by this abstract pathname that satisfy the specified filter."
+        "type": "String[]",
+        "name": "list",
+        "args": ["FilenameFilter filter"],
+        "desc": "Returns an array of strings naming the files and directories in the directory denoted by this abstract pathname that satisfy the specified filter."
     },
     {
-        "Modifier and Type": "File[]",
-        "Method": "listFiles",
-        "Arguments": "()",
-        "Description": "Returns an array of abstract pathnames denoting the files in the directory denoted by this abstract pathname."
+        "type": "File[]",
+        "name": "listFiles",
+        "args": [],
+        "desc": "Returns an array of abstract pathnames denoting the files in the directory denoted by this abstract pathname."
     },
     {
-        "Modifier and Type": "File[]",
-        "Method": "listFiles",
-        "Arguments": "(FileFilter filter)",
-        "Description": "Returns an array of abstract pathnames denoting the files and directories in the directory denoted by this abstract pathname that satisfy the specified filter."
+        "type": "File[]",
+        "name": "listFiles",
+        "args": ["FileFilter filter"],
+        "desc": "Returns an array of abstract pathnames denoting the files and directories in the directory denoted by this abstract pathname that satisfy the specified filter."
     },
     {
-        "Modifier and Type": "File[]",
-        "Method": "listFiles",
-        "Arguments": "(FilenameFilter filter)",
-        "Description": "Returns an array of abstract pathnames denoting the files and directories in the directory denoted by this abstract pathname that satisfy the specified filter."
+        "type": "File[]",
+        "name": "listFiles",
+        "args": ["FilenameFilter filter"],
+        "desc": "Returns an array of abstract pathnames denoting the files and directories in the directory denoted by this abstract pathname that satisfy the specified filter."
     },
     {
-        "Modifier and Type": "static File[]",
-        "Method": "listRoots",
-        "Arguments": "()",
-        "Description": "List the available filesystem roots."
+        "type": "static File[]",
+        "name": "listRoots",
+        "args": [],
+        "desc": "List the available filesystem roots."
     },
     {
-        "Modifier and Type": "boolean",
-        "Method": "mkdir",
-        "Arguments": "()",
-        "Description": "Creates the directory named by this abstract pathname."
+        "type": "boolean",
+        "name": "mkdir",
+        "args": [],
+        "desc": "Creates the directory named by this abstract pathname."
     },
     {
-        "Modifier and Type": "boolean",
-        "Method": "mkdirs",
-        "Arguments": "()",
-        "Description": "Creates the directory named by this abstract pathname"
+        "type": "boolean",
+        "name": "mkdirs",
+        "args": [],
+        "desc": "Creates the directory named by this abstract pathname"
     },
     {
-        "Modifier and Type": "boolean",
-        "Method": "renameTo",
-        "Arguments": "(File dest)",
-        "Description": "Renames the file denoted by this abstract pathname."
+        "type": "boolean",
+        "name": "renameTo",
+        "args": ["File dest"],
+        "desc": "Renames the file denoted by this abstract pathname."
     },
     {
-        "Modifier and Type": "boolean",
-        "Method": "setExecutable",
-        "Arguments": "(boolean executable)",
-        "Description": "A convenience method to set the owner's execute permission for this abstract pathname."
+        "type": "boolean",
+        "name": "setExecutable",
+        "args": ["boolean executable"],
+        "desc": "A convenience name to set the owner's execute permission for this abstract pathname."
     },
     {
-        "Modifier and Type": "boolean",
-        "Method": "setExecutable",
-        "Arguments": "(boolean executable, boolean ownerOnly)",
-        "Description": "Sets the owner's or everybody's execute permission for this abstract pathname."
+        "type": "boolean",
+        "name": "setExecutable",
+        "args": ["boolean executable", "boolean ownerOnly"],
+        "desc": "Sets the owner's or everybody's execute permission for this abstract pathname."
     },
     {
-        "Modifier and Type": "boolean",
-        "Method": "setLastModified",
-        "Arguments": "(long time)",
-        "Description": "Sets the last-modified time of the file or directory named by this abstract pathname."
+        "type": "boolean",
+        "name": "setLastModified",
+        "args": ["long time"],
+        "desc": "Sets the last-modified time of the file or directory named by this abstract pathname."
     },
     {
-        "Modifier and Type": "boolean",
-        "Method": "setReadable",
-        "Arguments": "(boolean readable)",
-        "Description": "A convenience method to set the owner's read permission for this abstract pathname."
+        "type": "boolean",
+        "name": "setReadable",
+        "args": ["boolean readable"],
+        "desc": "A convenience name to set the owner's read permission for this abstract pathname."
     },
     {
-        "Modifier and Type": "boolean",
-        "Method": "setReadable",
-        "Arguments": "(boolean readable, boolean ownerOnly)",
-        "Description": "Sets the owner's or everybody's read permission for this abstract pathname."
+        "type": "boolean",
+        "name": "setReadable",
+        "args": ["boolean readable", "boolean ownerOnly"],
+        "desc": "Sets the owner's or everybody's read permission for this abstract pathname."
     },
     {
-        "Modifier and Type": "boolean",
-        "Method": "setReadOnly",
-        "Arguments": "()",
-        "Description": "Marks the file or directory named by this abstract pathname so that only read operations are allowed."
+        "type": "boolean",
+        "name": "setReadOnly",
+        "args": [],
+        "desc": "Marks the file or directory named by this abstract pathname so that only read operations are allowed."
     },
     {
-        "Modifier and Type": "boolean",
-        "Method": "setWritable",
-        "Arguments": "(boolean writable)",
-        "Description": "A convenience method to set the owner's write permission for this abstract pathname."
+        "type": "boolean",
+        "name": "setWritable",
+        "args": ["boolean writable"],
+        "desc": "A convenience name to set the owner's write permission for this abstract pathname."
     },
     {
-        "Modifier and Type": "boolean",
-        "Method": "setWritable",
-        "Arguments": "(boolean writable, boolean ownerOnly)",
-        "Description": "Sets the owner's or everybody's write permission for this abstract pathname."
+        "type": "boolean",
+        "name": "setWritable",
+        "args": ["boolean writable", "boolean ownerOnly"],
+        "desc": "Sets the owner's or everybody's write permission for this abstract pathname."
     },
     {
-        "Modifier and Type": "Path",
-        "Method": "toPath",
-        "Arguments": "()",
-        "Description": "Returns a java.nio.file.Path object constructed from the this abstract path."
+        "type": "Path",
+        "name": "toPath",
+        "args": [],
+        "desc": "Returns a java.nio.file.Path object constructed from the this abstract path."
     },
     {
-        "Modifier and Type": "String",
-        "Method": "toString",
-        "Arguments": "()",
-        "Description": "Returns the pathname string of this abstract pathname."
+        "type": "String",
+        "name": "toString",
+        "args": [],
+        "desc": "Returns the pathname string of this abstract pathname."
     },
     {
-        "Modifier and Type": "URI",
-        "Method": "toURI",
-        "Arguments": "()",
-        "Description": "Constructs a file: URI that represents this abstract pathname."
+        "type": "URI",
+        "name": "toURI",
+        "args": [],
+        "desc": "Constructs a file: URI that represents this abstract pathname."
     },
     {
-        "Modifier and Type": "URL",
-        "Method": "toURL",
-        "Arguments": "()",
-        "Description": "Deprecated. "
+        "type": "URL",
+        "name": "toURL",
+        "args": [],
+        "desc": "Deprecated. "
     },
     {
-        "Modifier and Type": "This method does not automatically escape characters that are illegal in URLs. It is recommended that new code convert an abstract pathname into a URL by first converting it into a URI",
-        "Method": " via the toURI method",
-        "Arguments": " and then converting the URI into a URL via the URI.toURL method."
+        "type": "This name does not automatically escape characters that are illegal in URLs. It is recommended that new code convert an abstract pathname into a URL by first converting it into a URI",
+        "name": " via the toURI name",
+        "args": " and then converting the URI into a URL via the URI.toURL name."
     }
 ]

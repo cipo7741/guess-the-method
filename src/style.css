@@ -84,7 +84,7 @@ border: medium none;
 border-radius: 6px;
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
-padding-right: 10px;
+padding-right: 1px;
 padding-left: 10px;
 padding-bottom: 4px;
 margin-left: 10px; 
@@ -97,4 +97,21 @@ input[type="submit"]:hover {
 
 textarea:focus, input:focus{
     outline: 0;
+}
+
+@media (max-width: 600px) {
+  div#points {
+    position: relative;
+    margin: auto;
+    height: 45px;
+  }
+  p#description {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    
+  }
+  div#content {
+   margin-top: 0px;
+  }
 }

@@ -1,5 +1,5 @@
 var xmlhttp = new XMLHttpRequest();
-var url = "data/java/lang/Math.json";
+var url = "data/java/lang/Long.json";
 var method, jsonData;
 var numPoints, numQuests, numTries;
 
@@ -26,18 +26,18 @@ script.src = url + "?callback=my_callback";
     numQuests += 1;
       i = randomSeed(arr.length)
       buildQuest(arr, i);
-      method = arr[i].Method;
+      method = arr[i].name;
   }
 
   function buildQuest(arr, i) {
       numTries = 3;
-      document.getElementById("description").innerHTML = arr[i].Description;
+      document.getElementById("description").innerHTML = arr[i].desc;
       var guessInput = document.createElement("input");
       guessInput.setAttribute('type', 'text');
       guessInput.setAttribute('id', 'guessInput');
       guessInput.setAttribute('class', 'focus');
-      guessInput.setAttribute('maxlength', arr[i].Method.length);
-      guessInput.setAttribute('style', 'width: calc(15px *' + arr[i].Method.length +');');
+      guessInput.setAttribute('maxlength', arr[i].name.length);
+      guessInput.setAttribute('style', 'width: calc(15px *' + arr[i].name.length +');');
       guessInput = new XMLSerializer().serializeToString(guessInput)
       var guessSubmit = document.createElement("input");
       guessSubmit.setAttribute('type', 'submit');
@@ -45,8 +45,8 @@ script.src = url + "?callback=my_callback";
       guessSubmit.setAttribute('value', '>');
       guessSubmit.setAttribute('onclick', 'check()');
       guessSubmit = new XMLSerializer().serializeToString(guessSubmit)
-      document.getElementById("guess").innerHTML = "java.lang.Math."
-      document.getElementById("guess").innerHTML += guessInput + arr[i].Arguments + guessSubmit;
+      document.getElementById("guess").innerHTML = arr[i].type + " java.lang.Math."
+      document.getElementById("guess").innerHTML += guessInput + "(" + arr[i].args + ")" + guessSubmit;
       $("input.focus:last").focus();
   }
 
