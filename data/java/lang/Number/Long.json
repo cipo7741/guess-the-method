@@ -1,0 +1,212 @@
+[
+    {
+        "type": "static int",
+        "name": "bitCount",
+        "args": ["long i"],
+        "desc": "Returns the number of one-bits in the two's complement binary representation of the specified long value."
+    },
+    {
+        "type": "byte",
+        "name": "byteValue",
+        "args": [],
+        "desc": "Returns the value of this Long as a byte."
+    },
+    {
+        "type": "static int",
+        "name": "compare",
+        "args": ["long x", "long y"],
+        "desc": "Compares two long values numerically."
+    },
+    {
+        "type": "int",
+        "name": "compareTo",
+        "args": ["Long anotherLong"],
+        "desc": "Compares two Long objects numerically."
+    },
+    {
+        "type": "static Long",
+        "name": "decode",
+        "args": ["String nm"],
+        "desc": "Decodes a String into a Long."
+    },
+    {
+        "type": "double",
+        "name": "doubleValue",
+        "args": [],
+        "desc": "Returns the value of this Long as a double."
+    },
+    {
+        "type": "boolean",
+        "name": "equals",
+        "args": ["Object obj"],
+        "desc": "Compares this object to the specified object."
+    },
+    {
+        "type": "float",
+        "name": "floatValue",
+        "args": [],
+        "desc": "Returns the value of this Long as a float."
+    },
+    {
+        "type": "static Long",
+        "name": "getLong",
+        "args": ["String nm"],
+        "desc": "Determines the long value of the system property with the specified name."
+    },
+    {
+        "type": "static Long",
+        "name": "getLong",
+        "args": ["String nm", "long val"],
+        "desc": "Determines the long value of the system property with the specified name."
+    },
+    {
+        "type": "static Long",
+        "name": "getLong",
+        "args": ["String nm", "Long val"],
+        "desc": "Returns the long value of the system property with the specified name."
+    },
+    {
+        "type": "int",
+        "name": "hashCode",
+        "args": [],
+        "desc": "Returns a hash code for this Long."
+    },
+    {
+        "type": "static long",
+        "name": "highestOneBit",
+        "args": ["long i"],
+        "desc": "Returns a long value with at most a single one-bitt, in the position of the highest-order (\"leftmost\") one-bit in the specified long value."
+    },
+    {
+        "type": "int",
+        "name": "intValue",
+        "args": [],
+        "desc": "Returns the value of this Long as an int."
+    },
+    {
+        "type": "long",
+        "name": "longValue",
+        "args": [],
+        "desc": "Returns the value of this Long as a long value."
+    },
+    {
+        "type": "static long",
+        "name": "lowestOneBit",
+        "args": ["long i"],
+        "desc": "Returns a long value with at most a single one-bit, in the position of the lowest-order (\"rightmost\") one-bit in the specified long value."
+    },
+    {
+        "type": "static int",
+        "name": "numberOfLeadingZeros",
+        "args": ["long i"],
+        "desc": "Returns the number of zero bits preceding the highest-order (\"leftmost\") one-bit in the two's complement binary representation of the specified long value."
+    },
+    {
+        "type": "static int",
+        "name": "numberOfTrailingZeros",
+        "args": ["long i"],
+        "desc": "Returns the number of zero bits following the lowest-order (\"rightmost\") one-bit in the two's complement binary representation of the specified long value."
+    },
+    {
+        "type": "static long",
+        "name": "parseLong",
+        "args": ["String s"],
+        "desc": "Parses the string argument as a signed decimal long."
+    },
+    {
+        "type": "static long",
+        "name": "parseLong",
+        "args": ["String s", "int radix"],
+        "desc": "Parses the string argument as a signed long in the radix specified by the second argument."
+    },
+    {
+        "type": "static long",
+        "name": "reverse",
+        "args": ["long i"],
+        "desc": "Returns the value obtained by reversing the order of the bits in the two's complement binary representation of the specified long value."
+    },
+    {
+        "type": "static long",
+        "name": "reverseBytes",
+        "args": ["long i"],
+        "desc": "Returns the value obtained by reversing the order of the bytes in the two's complement representation of the specified long value."
+    },
+    {
+        "type": "static long",
+        "name": "rotateLeft",
+        "args": ["long i", "int distance"],
+        "desc": "Returns the value obtained by rotating the two's complement binary representation of the specified long value left by the specified number of bits."
+    },
+    {
+        "type": "static long",
+        "name": "rotateRight",
+        "args": ["long i", "int distance"],
+        "desc": "Returns the value obtained by rotating the two's complement binary representation of the specified long value right by the specified number of bits."
+    },
+    {
+        "type": "short",
+        "name": "shortValue",
+        "args": [],
+        "desc": "Returns the value of this Long as a short."
+    },
+    {
+        "type": "static int",
+        "name": "signum",
+        "args": ["long i"],
+        "desc": "Returns the signum function of the specified long value."
+    },
+    {
+        "type": "static String",
+        "name": "toBinaryString",
+        "args": ["long i"],
+        "desc": "Returns a string representation of the long argument as an unsigned integer in base 2."
+    },
+    {
+        "type": "static String",
+        "name": "toHexString",
+        "args": ["long i"],
+        "desc": "Returns a string representation of the long argument as an unsigned integer in base 16."
+    },
+    {
+        "type": "static String",
+        "name": "toOctalString",
+        "args": ["long i"],
+        "desc": "Returns a string representation of the long argument as an unsigned integer in base 8."
+    },
+    {
+        "type": "String",
+        "name": "toString",
+        "args": [],
+        "desc": "Returns a String object representing this Long's value."
+    },
+    {
+        "type": "static String",
+        "name": "toString",
+        "args": ["long i"],
+        "desc": "Returns a String object representing the specified long."
+    },
+    {
+        "type": "static String",
+        "name": "toString",
+        "args": ["long i", "int radix"],
+        "desc": "Returns a string representation of the first argument in the radix specified by the second argument."
+    },
+    {
+        "type": "static Long",
+        "name": "valueOf",
+        "args": ["long l"],
+        "desc": "Returns a Long instance representing the specified long value."
+    },
+    {
+        "type": "static Long",
+        "name": "valueOf",
+        "args": ["String s"],
+        "desc": "Returns a Long object holding the value of the specified String."
+    },
+    {
+        "type": "static Long",
+        "name": "valueOf",
+        "args": ["String s", "int radix"],
+        "desc": "Returns a Long object holding the value extracted from the specified String when parsed with the radix given by the second argument."
+    }
+]
