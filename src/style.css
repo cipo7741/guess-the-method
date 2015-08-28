@@ -99,7 +99,7 @@ textarea:focus, input:focus{
     outline: 0;
 }
 
-@media (max-width: 600px) {
+@media only screen and (max-device-width: 600px) {
   div#points {
     position: relative;
     margin: auto;

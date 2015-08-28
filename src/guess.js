@@ -1,5 +1,6 @@
 var xmlhttp = new XMLHttpRequest();
-var url = "data/java/lang/Long.json";
+var url = "data/java/io/File.json";
+var javaPackage = url.substring(5,url.length-5).split("/").join(".")
 var method, jsonData;
 var numPoints, numQuests, numTries;
 
@@ -45,7 +46,7 @@ script.src = url + "?callback=my_callback";
       guessSubmit.setAttribute('value', '>');
       guessSubmit.setAttribute('onclick', 'check()');
       guessSubmit = new XMLSerializer().serializeToString(guessSubmit)
-      document.getElementById("guess").innerHTML = arr[i].type + " java.lang.Math."
+      document.getElementById("guess").innerHTML = arr[i].type + " " + javaPackage + "."
       document.getElementById("guess").innerHTML += guessInput + "(" + arr[i].args + ")" + guessSubmit;
       $("input.focus:last").focus();
   }

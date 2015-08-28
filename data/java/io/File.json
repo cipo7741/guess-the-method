@@ -231,7 +231,7 @@
         "type": "boolean",
         "name": "setExecutable",
         "args": ["boolean executable"],
-        "desc": "A convenience name to set the owner's execute permission for this abstract pathname."
+        "desc": "A convenience method to set the owner's execute permission for this abstract pathname."
     },
     {
         "type": "boolean",
@@ -249,7 +249,7 @@
         "type": "boolean",
         "name": "setReadable",
         "args": ["boolean readable"],
-        "desc": "A convenience name to set the owner's read permission for this abstract pathname."
+        "desc": "A convenience method to set the owner's read permission for this abstract pathname."
     },
     {
         "type": "boolean",
@@ -267,7 +267,7 @@
         "type": "boolean",
         "name": "setWritable",
         "args": ["boolean writable"],
-        "desc": "A convenience name to set the owner's write permission for this abstract pathname."
+        "desc": "A convenience method to set the owner's write permission for this abstract pathname."
     },
     {
         "type": "boolean",
@@ -292,16 +292,5 @@
         "name": "toURI",
         "args": [],
         "desc": "Constructs a file: URI that represents this abstract pathname."
-    },
-    {
-        "type": "URL",
-        "name": "toURL",
-        "args": [],
-        "desc": "Deprecated. "
-    },
-    {
-        "type": "This name does not automatically escape characters that are illegal in URLs. It is recommended that new code convert an abstract pathname into a URL by first converting it into a URI",
-        "name": " via the toURI name",
-        "args": " and then converting the URI into a URL via the URI.toURL name."
     }
 ]
