@@ -76,18 +76,14 @@ input[type="text"]:active {
 }
 
 input[type="submit"] {
-background: none repeat scroll 0% 0% #3498DB;
+white-space: nowrap
 color: #ffffff;
-font-family: Georgia;
 font-size: 22px;
-border: medium none;
-border-radius: 6px;
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
-padding-right: 1px;
-padding-left: 10px;
-padding-bottom: 4px;
-margin-left: 10px; 
+padding:5px 15px; background:#3498DB; border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+    margin-left: 10px;
 }
 
 input[type="submit"]:hover {

@@ -1,5 +1,5 @@
 var xmlhttp = new XMLHttpRequest();
-var url = "data/java/io/File.json";
+var url = "data/java/lang/Number/Double.json";
 var javaPackage = url.substring(5,url.length-5).split("/").join(".")
 var method, jsonData;
 var numPoints, numQuests, numTries;
@@ -40,14 +40,15 @@ script.src = url + "?callback=my_callback";
       guessInput.setAttribute('maxlength', arr[i].name.length);
       guessInput.setAttribute('style', 'width: calc(15px *' + arr[i].name.length +');');
       guessInput = new XMLSerializer().serializeToString(guessInput)
-      var guessSubmit = document.createElement("input");
-      guessSubmit.setAttribute('type', 'submit');
-      guessSubmit.setAttribute('class', 'button');
-      guessSubmit.setAttribute('value', '>');
-      guessSubmit.setAttribute('onclick', 'check()');
-      guessSubmit = new XMLSerializer().serializeToString(guessSubmit)
+//      var guessSubmit = document.createElement("input");
+//      guessSubmit.setAttribute('type', 'submit');
+//      guessSubmit.setAttribute('class', 'button');
+//      guessSubmit.setAttribute('value', '>');
+//      guessSubmit.setAttribute('onclick', 'check()');
+//      guessSubmit = new XMLSerializer().serializeToString(guessSubmit)
       document.getElementById("guess").innerHTML = arr[i].type + " " + javaPackage + "."
-      document.getElementById("guess").innerHTML += guessInput + "(" + arr[i].args + ")" + guessSubmit;
+      document.getElementById("guess").innerHTML += guessInput + "(" + arr[i].args + ")";
+//       + guessSubmit;
       $("input.focus:last").focus();
   }
 
@@ -69,6 +70,7 @@ script.src = url + "?callback=my_callback";
     if (x === method) {
       return true;
     } else {
+      document.getElementById("result").innerHTML = " ";
       return false;
     }
   }
@@ -80,12 +82,28 @@ script.src = url + "?callback=my_callback";
     numPoints += 1;
     newQuest(jsonData);
   } else if (numTries < 1) {
-    text = "Maybe this one?";
+    text = "It was " + method + "!\nMaybe this one?";
     newQuest(jsonData);
   }
     else {
     numTries -= 1;
     text = "Wrong, try again.";
+  }
+  timeoutResult();
+  document.getElementById("count").innerHTML = numPoints + "/" + (numQuests - 1);
+  document.getElementById("result").innerHTML = text;
+  };
+
+  hint = function() {
+  var text;
+  if (isCorrect()) {
+    text = "Correct";
+    numPoints += 1;
+    newQuest(jsonData);
+  } else {
+    numTries -= 1;
+    text = "Come on, now you'll know!";
+    document.getElementById("guessInput").value = method.substring(0,Math.floor(method.length/2));
   }
   timeoutResult();
   document.getElementById("count").innerHTML = numPoints + "/" + (numQuests - 1);
