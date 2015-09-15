@@ -40,15 +40,8 @@ script.src = url + "?callback=my_callback";
       guessInput.setAttribute('maxlength', arr[i].name.length);
       guessInput.setAttribute('style', 'width: calc(15px *' + arr[i].name.length +');');
       guessInput = new XMLSerializer().serializeToString(guessInput)
-//      var guessSubmit = document.createElement("input");
-//      guessSubmit.setAttribute('type', 'submit');
-//      guessSubmit.setAttribute('class', 'button');
-//      guessSubmit.setAttribute('value', '>');
-//      guessSubmit.setAttribute('onclick', 'check()');
-//      guessSubmit = new XMLSerializer().serializeToString(guessSubmit)
       document.getElementById("guess").innerHTML = arr[i].type + " " + javaPackage + "."
       document.getElementById("guess").innerHTML += guessInput + "(" + arr[i].args + ")";
-//       + guessSubmit;
       $("input.focus:last").focus();
   }
 
