@@ -1,113 +1,154 @@
-var xmlhttp = new XMLHttpRequest();
-var url = "data/java/lang/Number/Double.json";
-var javaPackage = url.substring(5, url.length - 5).split("/").join(".")
-var method, jsonData;
-var numPoints, numQuests, numTries;
+'use strict';
 
-script = document.createElement("script");
-script.type = "text/javascript";
-script.src = url + "?callback=my_callback";
+var loadJson = function(url){
+  return new Promise(function(resolve, reject) {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open('GET', url, true);
+    xmlhttp.onload = function() {
+      if (xmlhttp.status === 200) {
+        resolve(JSON.parse(xmlhttp.responseText));
+      }
+    }
+    xmlhttp.onerror = function() {
+      reject(Error('Data didn\'t load successfully; error code:' + request.statusText));
+    }
+    xmlhttp.send();
+  });
+}
 
-function randomSeed(x) {
+var Game = function(jsonData){
+    var points = 0;
+    var rounds = -1;
+    return {
+        countPoint:function() {
+            points += 1;
+        },
+        nextRound:function() {
+            var method = jsonData[randomSeed(jsonData.length)];
+            rounds += 1;
+            var quest = new Quest(method, function() {
+                countPoint();
+                nextRound();
+            }, function() {
+                nextRound();
+            });
+            return quest;
+        },
+        getPoints:function() {
+            return points;
+        },
+        getRounds:function() {
+            return rounds;
+        }
+    }
+
+};
+
+var Quest = function(method, successCallback, failureCallback){
+    var numTries = 3;
+    View.init(method);
+
+    var check = function(input, hintFlag) {
+        if (input === method.name) {
+            successCallback();
+            return 'Correct';
+        } else if (numTries < 1) {
+            failureCallback();
+            return 'It was ' + method + '!\nMaybe this one?';
+        } else if (hintFlag) {
+            numTries -= 1;
+            return 'Come on, now you\'ll know!';
+        } else {
+            numTries -= 1;
+            return 'Wrong, try again.';
+        }
+    };
+
+    return {
+        submit:function(input) {
+            return check(input, false);
+            timeoutResult();
+            document.getElementById('count').innerHTML = numPoints + '/' + (numQuests - 1);
+            document.getElementById('result').innerHTML = text;
+        },
+        ask:function() {
+            return check(input, true);
+            // TODO: substring!!!
+            document.getElementById('guessInput').value = method.name.substring(0, Math.floor(method.name.length / 2));
+            
+            timeoutResult();
+            document.getElementById('count').innerHTML = numPoints + '/' + (numQuests - 1);
+            document.getElementById('result').innerHTML = text;
+        }
+    }
+};
+
+var View = {
+    init:function(method) {
+        document.getElementById('description').innerHTML = method.desc;
+        var guessInput = document.createElement('input');
+        guessInput.setAttribute('type', 'text');
+        guessInput.setAttribute('id', 'guessInput');
+        guessInput.setAttribute('class', 'focus');
+        guessInput.setAttribute('maxlength', method.name.length);
+        guessInput.setAttribute('style', 'width: calc(14px *' + method.name.length + ');');
+        guessInput = new XMLSerializer().serializeToString(guessInput)
+        document.getElementById('guess').innerHTML = method.type + ' ' + javaPackage + '.'
+        document.getElementById('guess').innerHTML += guessInput + '(' + method.args + ')';
+        document.querySelector('input.focus').focus();
+
+        // ###################   Controller  ##################################
+        document.addEventListener('keypress', function(e) {
+            if (e.keyCode === 13) check();
+        });
+        document.querySelector('input.button').addEventListener('click', hint);
+    },
+    showHint:function() {
+        document.getElementById('guessInput').value = method.name.substring(0, Math.floor(method.name.length / 2));
+        
+        timeoutResult();
+        document.getElementById('count').innerHTML = numPoints + '/' + (numQuests - 1);
+        document.getElementById('result').innerHTML = 'Come on, now you\'ll know!';
+    },
+    showResult:function() {
+        
+    }
+};
+
+var url = 'data/java/lang/Number/Double.json';
+var javaPackage = url.substring(5, url.length - 5).split('/').join('.')
+
+var randomSeed = function(x) {
     return Math.floor((Math.random() * x));
 }
 
-xmlhttp.onreadystatechange = function() {
-    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        numPoints = 0;
-        numQuests = 0;
-        jsonData = JSON.parse(xmlhttp.responseText);
-        newQuest(jsonData);
-    }
-}
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
-
-function newQuest(arr) {
-    numQuests += 1;
-    i = randomSeed(arr.length)
-    buildQuest(arr, i);
-    method = arr[i].name;
-}
-
-function buildQuest(arr, i) {
-    numTries = 3;
-    document.getElementById("description").innerHTML = arr[i].desc;
-    var guessInput = document.createElement("input");
-    guessInput.setAttribute('type', 'text');
-    guessInput.setAttribute('id', 'guessInput');
-    guessInput.setAttribute('class', 'focus');
-    guessInput.setAttribute('maxlength', arr[i].name.length);
-    guessInput.setAttribute('style', 'width: calc(15px *' + arr[i].name.length + ');');
-    guessInput = new XMLSerializer().serializeToString(guessInput)
-    document.getElementById("guess").innerHTML = arr[i].type + " " + javaPackage + "."
-    document.getElementById("guess").innerHTML += guessInput + "(" + arr[i].args + ")";
-    document.querySelector("input.focus").focus();
-}
-
-countPoint = function() {
-    numPoints += 1;
-}
-
-timeoutResult = function() {
+var timeoutResult = function() {
     setTimeout('blankResult()', 5000);
 }
 
-blankResult = function() {
-    return document.getElementById("result").innerHTML = " ";
+var blankResult = function() {
+    return document.getElementById('result').innerHTML = ' ';
 }
 
-isCorrect = function() {
-    var x;
-    x = document.getElementById("guessInput").value;
-    if (x === method) {
-        return true;
-    } else {
-        document.getElementById("result").innerHTML = " ";
-        return false;
-    }
-}
-
-check = function() {
-    var text;
-    if (isCorrect()) {
-        text = "Correct";
-        numPoints += 1;
-        newQuest(jsonData);
-    } else if (numTries < 1) {
-        text = "It was " + method + "!\nMaybe this one?";
-        newQuest(jsonData);
-    } else {
-        numTries -= 1;
-        text = "Wrong, try again.";
-    }
-    timeoutResult();
-    document.getElementById("count").innerHTML = numPoints + "/" + (numQuests - 1);
-    document.getElementById("result").innerHTML = text;
-};
-
-hint = function() {
-    var text;
-    if (isCorrect()) {
-        text = "Correct";
-        numPoints += 1;
-        newQuest(jsonData);
-    } else {
-        numTries -= 1;
-        text = "Come on, now you'll know!";
-        document.getElementById("guessInput").value = method.substring(0, Math.floor(method.length / 2));
-    }
-    timeoutResult();
-    document.getElementById("count").innerHTML = numPoints + "/" + (numQuests - 1);
-    document.getElementById("result").innerHTML = text;
-};
 
 
 
-document.addEventListener('keypress', function(e) {
-    if (e.keyCode === 13 && isCorrect()) {
-        check();
-    } else if (e.keyCode === 13) {
-        check();
-    }
+
+
+
+// ############## controller ################################################################
+
+
+
+// ############## run #######################################################################
+
+loadJson(url).then(function(jsonData) {
+    document.addEventListener('DOMContentLoaded', function() {
+            var game = new Game(jsonData);
+            var quest = game.nextRound();
+            if(quest.successful()) 
+
+        }, false);
+    }, function(Error){
+        console.log(Error)
 });
