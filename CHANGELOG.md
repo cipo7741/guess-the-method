@@ -2,7 +2,7 @@
 All notable changes to this project will be documented in this file.
 [guess-the-method](https://github.com/cipo7741/guess-the-method)
 
-## [Unreleased] unreleased
+## [Unreleased]
 
 - mvc:
   - model: game -> quests
