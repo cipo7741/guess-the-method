@@ -4,6 +4,19 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased][unreleased]
 
+- mvc:
+  - model: game -> quests
+
+## [0.0.2] - 2016-03-15
+
+### Added
+
+- Promise: [https://github.com/mdn/promises-test/blob/gh-pages/index.html](https://github.com/mdn/promises-test/blob/gh-pages/index.html)
+
+### Removed
+
+- jQuery + JsonP
+
 ### Changed
 
 - the enter button changed to hint button, because the enter function is already the enter key
