@@ -12,7 +12,7 @@ h1, h2, h3 {
 
 div#points {
 	position: absolute;
-	top: 5px;
+	top: 50px;
 	width: 100px;
 	height: 70px;
 	margin-right: 50px;
@@ -25,7 +25,7 @@ div {
 }
 
 div#content {
-	margin-top: 100px;
+	margin-top: 80px;
 }
 
 /*div#points {
@@ -38,12 +38,24 @@ p {
 	font-weight: bold;
     font-size: 22px;
     font-family: monospace;
+	margin-left: auto;
+    margin-right: auto;
+	max-width: 600px;
 }
 
 p#description {
-	margin-left: auto;
-    margin-right: auto;
-	width: 600px;
+	animation-duration: 3s;
+    animation-name: appear;
+}
+
+@keyframes appear {
+  from {
+    color: #3498db; 
+  }
+
+  to {
+    color; black;
+  }
 }
 
 p#result {
