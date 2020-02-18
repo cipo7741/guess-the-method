@@ -4,25 +4,29 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>guess the method</title>
-	<script type="text/javascript" src="src/guess.js"></script>
-	<link rel="shortcut icon" href="media/favicon.ico">
-	<link rel="stylesheet" href="src/style.css" />
+    <title>guess the method</title>
+    <script type="text/javascript" src="src/guess.js"></script>
+    <link rel="shortcut icon" href="media/favicon.ico">
+    <link rel="stylesheet" href="src/style.css"/>
 </head>
 <body>
-	<div id="header">
-		<h1>Guess the <a href="http://docs.oracle.com/javase/7/docs/api/">Java Doc</a> method name!</h1>
-		<div id="points"><p id="count">0/0</p></div>
-	</div>
-	<div id="content">
-		<p id="description">
-		</p>
-		<p id="guess">
-		</p>
-		<input xmlns="http://www.w3.org/1999/xhtml" type="submit" class="button" value="?" onclick="hint()">
-	</div>
-	<div>
-	<p id="result"> 
-	</p>
-	</div>
+<div id="header">
+    <h1>Guess the <a href="http://docs.oracle.com/javase/7/docs/api/">Java Doc</a> method name!</h1>
+    <div id="points">
+        <p id="count">0/0</p>
+    </div>
+</div>
+<div id="content">
+    <p id="description">
+    </p>
+    <p id="guess">
+    </p>
+    <input xmlns="http://www.w3.org/1999/xhtml" type="submit" class="button" value="?" onclick="hint()">
+    <div id="result">
+        <p id="flag">
+        </p>
+        <p id="answer">
+        </p>
+    </div>
+</div>
 </body>

@@ -1,125 +1,113 @@
-/*******************************************************************
-LAYOUT
-*******************************************************************/
-body {
-	position: relative;
+/******************************************************************* LAYOUT *******************************************************************/
+ body {
+     position: relative;
+}
+ h1, h2, h3 {
+     text-align: center;
+     font-family: monospace;
+}
+ #points {
+     position: absolute;
+     top: 50px;
+     width: 100px;
+     height: 70px;
+     margin-right: 50px;
+     right: 0;
+}
+ div {
+     text-align: center
+}
+ #content {
+     margin-top: 80px;
+}
+ p {
+     font-weight: bold;
+     font-size: 22px;
+     font-family: monospace;
+     margin-left: auto;
+     margin-right: auto;
+     max-width: 1000px;
+}
+ #description {
+     animation-duration: 3s;
+     animation-name: appear;
+}
+ @keyframes appear {
+     from {
+         color: #3498db;
+    }
+     to {
+         color: black;
+    }
 }
 
-h1, h2, h3 {
-	text-align: center;
-	font-family: monospace;
+/******************************************************************* LINKS *******************************************************************/
+ a {
+     text-decoration: none;
+}
+ a:link {
+     color: #3498db
+}
+ a:visited {
+     color: #3498db
+}
+ a:hover {
+     color: #aaa
+}
+ a:active {
+     color: #3498db
+}
+/******************************************************************* FORMS *******************************************************************/
+ input[type="text"] {
+     font-family: monospace;
+     letter-spacing: 0.08em;
+     font-size: 22px;
+     background: url(../media/dashes-to-dashes-transparent.png) transparent 0 22px repeat-x;
+     border-style: none;
+}
+ input[type="text"]:active {
+     border: none;
+}
+ input[type="submit"] {
+     white-space: nowrap;
+     color: #fff;
+     font-size: 22px;
+     padding:5px 15px;
+     background:#3498DB;
+     border:0 none;
+     cursor:pointer;
+     -webkit-border-radius: 5px;
+     border-radius: 5px;
+     margin-left: 10px;
+}
+ input[type="submit"]:hover {
+     background: #aaa;
+     text-decoration: none;
+}
+ textarea:focus, input:focus{
+     outline: 0;
 }
 
-div#points {
-	position: absolute;
-	top: 50px;
-	width: 100px;
-	height: 70px;
-	margin-right: 50px;
-	right: 0;
+#result {
+     /*white-space: nowrap;*/
+     padding:5px 15px;
+     border:0 none;
+     -webkit-border-radius: 5px;
+     border-radius: 5px;
 }
 
-
-div {
-	text-align: center
-}
-
-div#content {
-	margin-top: 80px;
-}
-
-/*div#points {
-	margin: 50px;
-	position: absolute;
-	right: 0;
-}*/
-
-p {
-	font-weight: bold;
-    font-size: 22px;
-    font-family: monospace;
-	margin-left: auto;
-    margin-right: auto;
-	max-width: 600px;
-}
-
-p#description {
-	animation-duration: 3s;
-    animation-name: appear;
-}
-
-@keyframes appear {
-  from {
-    color: #3498db; 
-  }
-
-  to {
-    color; black;
-  }
-}
-
-p#result {
-	margin: 22px;
-}
-/*******************************************************************
-LINKS
-*******************************************************************/
-a {  text-decoration: none; }
-a:link { color: #3498db }
-a:visited { color: #3498db }
-a:hover { color: #aaa }
-a:active { color: #3498db }
-
-/*******************************************************************
-FORMS
-*******************************************************************/
-
-form { }
-#form { }
-input[type="text"] {
-	font-family: monospace;
-	letter-spacing: 0.08em;
-	font-size: 22px;
-	background: url(../media/dashes-to-dashes-transparent.png) transparent 0 22px repeat-x;
-	border-style: none;
-}
-input[type="text"]:active {
-	border: none;
-}
-
-input[type="submit"] {
-white-space: nowrap
-color: #ffffff;
-font-size: 22px;
-padding:5px 15px; background:#3498DB; border:0 none;
-    cursor:pointer;
-    -webkit-border-radius: 5px;
-    border-radius: 5px; 
-    margin-left: 10px;
-}
-
-input[type="submit"]:hover {
-  background: #aaa;
-  text-decoration: none;
-}
-
-textarea:focus, input:focus{
-    outline: 0;
-}
-
-@media only screen and (max-device-width: 600px) {
-  div#points {
-    position: relative;
-    margin: auto;
-    height: 45px;
-  }
-  p#description {
-    position: relative;
-    margin: auto;
-    width: 100%;
-    
-  }
-  div#content {
-   margin-top: 0px;
-  }
+ @media only screen and (max-device-width: 600px) {
+     #points {
+         position: relative;
+         margin: auto;
+         height: 45px;
+    }
+     #description {
+         position: relative;
+         margin: auto;
+         width: 100%;
+    }
+     #content {
+         margin-top: 0px;
+    }
 }
