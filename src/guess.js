@@ -1,41 +1,30 @@
 'use strict'
 
-var currentPackageArray = ['java', 'lang', 'Number', 'Double'];
+var currentPackage = ['java', 'lang', 'Number'];
+var options = ['Double', 'Integer', 'Long']
 var wrongResultColor = '#FFC4C4';
 var rightResultColor = '#BAFFBD';
 var resourcesPath = 'data';
 var resourcesExtension = '.json';
 
+numTries = 3;
+
 var method, jsonData;
 var numPoints, numQuests, numTries;
 
-// 'java/lang/Number/Double' -> ['data', 'java', 'lang', 'Number', 'Double']
-var getPackageArray = function(path) {
-    return path.split('/').join('.')
-}
-
-// (['data', 'java', 'lang', 'Number', 'Double'], '/') -> 'data/java/lang/Number'
-var getBasePackageString = function(packageArray, seperator) {
-    return packageArray.splice(0,packageArray.length-1).join(seperator);
-}
-
-// ['data', 'java', 'lang', 'Number', 'Double'] -> 'Double'
-var getClassString = function(packageArray) {
-    return packageArray[packageArray.length-1]
-}
-
-
-var loadJson = function(packageArray){
+var loadJson = function(currentClassIndex){
     return new Promise(
         function(resolve, reject) {
             var xmlhttp = new XMLHttpRequest();
-            var path = resourcesPath + '/' + getBasePackageString(packageArray, '/') + '/' + getClassString(packageArray) + resourcesExtension;
+            var path = resourcesPath + '/' + currentPackage.join('/') + '/' + options[currentClassIndex] + resourcesExtension;
+            console.log(path);
             xmlhttp.open('GET', path, true);
             xmlhttp.onload = function() {
                 if (xmlhttp.status === 200) {
                     numPoints = 0;
                     numQuests = 0;
                     jsonData = JSON.parse(xmlhttp.responseText);
+                    console.log(jsonData.length);
                     newQuest(jsonData);
                 }
             }
@@ -47,57 +36,75 @@ var loadJson = function(packageArray){
         );
 }
 
-loadJson(currentPackageArray)
+loadJson(0);
 
 var randomSeed = function(x) {
     return Math.floor((Math.random() * x));
 }
 
-var newQuest = function(arr) {
-    //document.getElementById('result').setAttribute('background', '#fff');
+var newQuest = function(jsonArray) {
+    console.log(jsonArray.length);
     numQuests += 1;
-    var i = randomSeed(arr.length)
-    buildQuest(arr, i);
-    method = arr[i].name;
+    var currentQuestIndex = randomSeed(jsonArray.length);
+    var currentQuest = jsonArray[currentQuestIndex];
+    buildQuest(currentQuest);
+    method = currentQuest;
 }
 
-function buildQuest(arr, i) {
-    numTries = 3;
-    var elm = document.getElementById('description')
+var buildQuest = function(currentQuest) {
+    var selectBox = document.getElementById("guessDropdown");
+    if (typeof(selectBox) === 'undefined' || selectBox === null)
+    {
+      buildParagraphPackage();
+      console.log('hi fish');
+    }
+    buildParagraphDescription(currentQuest);
+    buildParagraphGuess(currentQuest);
+}
+
+var buildParagraphPackage = function() {
+    var guessClassSelect = document.createElement('select');
+    guessClassSelect.setAttribute('id', 'guessDropdown');
+    guessClassSelect.setAttribute('name', 'classes');
+    guessClassSelect.setAttribute('size', '1');
+    guessClassSelect.setAttribute('onchange', 'selectPackageClass()');
+    for (var i = 0; i < options.length; i++) {
+        var guessClassSelectOption = document.createElement('option');
+        guessClassSelectOption.innerHTML = options[i];
+        guessClassSelectOption.setAttribute('value',i);
+        var guessClassSelectOptionXml = new XMLSerializer().serializeToString(guessClassSelectOption);
+        guessClassSelect.innerHTML += guessClassSelectOptionXml;
+
+    }
+    var guessClassSelectXml = new XMLSerializer().serializeToString(guessClassSelect);
+    document.getElementById('package').innerHTML = currentPackage.join('.') + '.';
+    document.getElementById('package').innerHTML += guessClassSelectXml;
+}
+
+var buildParagraphDescription = function(currentQuest){
+    var elm = document.getElementById('description');
     var newone = elm.cloneNode(true);
-    newone.innerHTML = arr[i].desc;
+    newone.innerHTML = currentQuest.desc;
     elm.parentNode.replaceChild(newone, elm);
+}
+
+var buildParagraphGuess = function(currentQuest) {
     var guessInput = document.createElement('input');
     guessInput.setAttribute('type', 'text');
     guessInput.setAttribute('id', 'guessInput');
     guessInput.setAttribute('class', 'focus');
-    guessInput.setAttribute('maxlength', arr[i].name.length);
-    guessInput.setAttribute('style', 'width: calc(15px *' + arr[i].name.length + ');');
+    guessInput.setAttribute('maxlength', currentQuest.name.length);
+    guessInput.setAttribute('style', 'width: calc(15px *' + currentQuest.name.length + ');');
     var guessInputXml = new XMLSerializer().serializeToString(guessInput);
-        
-    // <select name='top5' size='5'>
-    //     <option>Heino</option>
-    //     <option>Michael Jackson</option>
-    //     <option>Tom Waits</option>
-    //     <option>Nina Hagen</option>
-    //     <option>Marianne Rosenberg</option>
-    //   </select>
-    var guessClassSelect = document.createElement('select');
-    guessClassSelect.setAttribute('name', 'classes');
-    guessClassSelect.setAttribute('size', '2');
-    var fs = require('fs');
-    var path = resourcesPath + '/' + getBasePackageString(currentPackageArray, '/') + '/' + getClassString(currentPackageArray) + resourcesExtension;
-    var files = fs.readdirSync(path);
-    for (var i = files.length - 1; i >= 0; i--) {
-        guessClassSelect.option = getClassString(files[i]);
-    }
-    var guessClassSelectXml = new XMLSerializer().serializeToString(guessClassSelect)
-
-    document.getElementById('guess').innerHTML = arr[i].type + ' ';
-    document.getElementById('guess').innerHTML += javaPackageString.replace(currentClass) + '.';
-    document.getElementById('guess').innerHTML += guessClassSelectXml
-    document.getElementById('guess').innerHTML += guessInputXml + '(' + arr[i].args + ')';
+    document.getElementById('guess').innerHTML = currentQuest.type + ' ';
+    document.getElementById('guess').innerHTML += guessInputXml + '(' + currentQuest.args + ')';
     document.querySelector('input.focus').focus();
+}
+
+var selectPackageClass = function(){
+    var selectBox = document.getElementById("guessDropdown");
+    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+    loadJson(selectedValue);
 }
 
 var blankResult = function() {

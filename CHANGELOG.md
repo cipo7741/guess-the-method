@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+document.getElementById('method.detail').nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.nextSibling.children[0].innerText
+
 ### TODO
 
 - revise timeout of result message
@@ -20,6 +22,8 @@ All notable changes to this project will be documented in this file.
 - correct / false centered bellow
     - red and green background  
 - new helper functions for package string management (for switching packages)
+- switch packages
+    - drop down
 
 ## [0.0.3] - 2016-03-17
 

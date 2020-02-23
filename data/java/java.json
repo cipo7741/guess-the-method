@@ -1,0 +1,102 @@
+{
+    "packages" : [
+        {
+            "name" : "io",
+            "classes" : [
+                "File",
+                "BufferedReader",
+                "ByteArrayInputStream",
+                "ByteArrayOutputStream",
+                "File",
+                "FileInputStream",
+                "FileNotFoundException",
+                "FileOutputStream",
+                "FileReader",
+                "FileWriter",
+                "InputStream",
+                "InputStreamReader",
+                "IOException",
+                "OutputStream",
+                "PrintWriter",
+                "Serializable",
+                "StringWriter",
+                "UnsupportedEncodingException"
+            ]
+        },
+        {
+            "name" : "lang",
+            "classes" : [
+                "Math",
+            ],
+            "superclasses" : [
+                {
+                    "name" : "Number",
+                    "classes" : [
+                        "Double",
+                        "Integer",
+                        "Long"
+                    ]
+                }
+            ]
+        },
+        {
+            "name" : "util",
+            "classes" : [
+                "Math",
+                "ArrayList",
+                "Arrays",
+                "Calendar",
+                "Collection",
+                "Collections",
+                "Comparator",
+                "Date",
+                "Enumeration",
+                "HashMap",
+                "HashSet",
+                "Iterator",
+                "LinkedHashMap",
+                "LinkedList",
+                "List",
+                "Locale",
+                "Map",
+                "Properties",
+                "Random",
+                "Set",
+                "UUID"
+            ],
+            "packages" : [
+                {
+                    "name" : "concurrent",
+                    "classes" : [
+                        "ConcurrentHashMap",
+                        "Executors",
+                        "ExecutorService",
+                        "TimeUnit"
+                    ]
+                },
+                {
+                    "name" : "logging",
+                    "classes" : [
+                        "Logger"
+                    ]
+                },
+                {
+                    "name" : "regex",
+                    "classes" : [
+                        "Matcher",
+                        "Pattern"
+                    ]
+                }
+            ],
+            "superclasses" : [
+                {
+                    "name" : "Map",
+                    "classes" : [
+                        "Entry"
+                    ]
+                }
+            ]
+
+        },
+    ]
+}
