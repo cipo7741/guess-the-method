@@ -17,11 +17,14 @@ document.getElementById('method.detail').nextSibling.nextSibling.nextSibling.nex
     - no repetitions
     - remember score on comeback
 
-## Changed
+## [0.0.4] - 2020-02-23
 
 - correct / false centered bellow
     - red and green background  
 - new helper functions for package string management (for switching packages)
+
+### Added
+
 - switch packages
     - drop down
 

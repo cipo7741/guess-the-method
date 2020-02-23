@@ -9,7 +9,7 @@ var resourcesExtension = '.json';
 
 numTries = 3;
 
-var method, jsonData;
+var correctAnswer, jsonData;
 var numPoints, numQuests, numTries;
 
 var loadJson = function(currentClassIndex){
@@ -48,7 +48,7 @@ var newQuest = function(jsonArray) {
     var currentQuestIndex = randomSeed(jsonArray.length);
     var currentQuest = jsonArray[currentQuestIndex];
     buildQuest(currentQuest);
-    method = currentQuest;
+    correctAnswer = currentQuest.name;
 }
 
 var buildQuest = function(currentQuest) {
@@ -113,7 +113,7 @@ var blankResult = function() {
 }
 
 var isCorrect = function() {
-    return document.getElementById('guessInput').value === method;
+    return document.getElementById('guessInput').value === correctAnswer;
 }
 
 var check = function() {
@@ -127,7 +127,8 @@ var check = function() {
         newQuest(jsonData);
     } else if (numTries < 1) {
         text = 'Wrong.';
-        answer = 'It was<i> ' + method + '</i>!\nMaybe this one?';
+        answer = 'It was<i> ' + correctAnswer + '</i>!\nMaybe this one?';
+        console.log(correctAnswer);
         color = wrongResultColor;
         newQuest(jsonData);
     } else {
@@ -149,13 +150,13 @@ var hint = function() {
     } else {
         numTries -= 1;
         text = 'Come on, now you\'ll know!';
-        document.getElementById('guessInput').value = method.substring(0, Math.floor(method.length / 2));
+        document.getElementById('guessInput').value = correctAnswer.substring(0, Math.floor(correctAnswer.length / 2));
     }
     printResult(text, answer, color);
 };
 
 var printResult = function(text, answer, color) {
-    document.getElementById('guessInput').value == method;
+    document.getElementById('guessInput').value == correctAnswer;
     document.getElementById('count').innerHTML = numPoints + '/' + (numQuests - 1);
     document.getElementById('flag').innerHTML = text;
     document.getElementById('flag').style.background = color;
