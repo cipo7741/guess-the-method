@@ -1,6 +1,7 @@
 'use strict'
 var resourcesPath = 'data/java/java.json';
 var jsonData;
+
 var loadJson = function(){
     return new Promise(
         function(resolve, reject) {
@@ -20,7 +21,9 @@ var loadJson = function(){
         }
         );
 }
+
 loadJson();
+
 var loadSidebar = function(jsonData) {
     console.log(jsonData.packages);
     loadPackages(jsonData.packages);

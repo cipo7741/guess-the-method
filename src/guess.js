@@ -1,22 +1,34 @@
 'use strict'
 
-var currentPackage = ['java', 'lang', 'Number'];
-var options = ['Double', 'Integer', 'Long']
+var currentClass = 'File';
+var options = ['io', 'lang']
 var wrongResultColor = '#FFC4C4';
 var rightResultColor = '#BAFFBD';
-var resourcesPath = 'data';
+var resourcesPath = 'data/java';
 var resourcesExtension = '.json';
+
+var packageInfoPath = 'data/java/test-java.json';
+var jsonPackageInfo;
 
 numTries = 3;
 
 var correctAnswer, jsonData;
 var numPoints, numQuests, numTries;
 
-var loadJson = function(currentClassIndex){
+var loadGuessesJson = function(currentPackageIndex){
+    var packagesDiv = document.getElementById('packages').children;
+    console.log(packagesDiv.length)
+    for (var i = 0; i < packagesDiv.length; i++) {
+        console.log(packagesDiv[i]);
+        if(packagesDiv[i].innerHTML.includes(options[currentPackageIndex])){
+            console.log(packagesDiv[i])
+            packagesDiv[i].setAttribute('style', 'background: yellow;')
+        }
+    }
     return new Promise(
         function(resolve, reject) {
             var xmlhttp = new XMLHttpRequest();
-            var path = resourcesPath + '/' + currentPackage.join('/') + '/' + options[currentClassIndex] + resourcesExtension;
+            var path = resourcesPath + '/' + options[currentPackageIndex]+ '/' + currentClass + resourcesExtension;
             console.log(path);
             xmlhttp.open('GET', path, true);
             xmlhttp.onload = function() {
@@ -26,6 +38,8 @@ var loadJson = function(currentClassIndex){
                     jsonData = JSON.parse(xmlhttp.responseText);
                     console.log(jsonData.length);
                     newQuest(jsonData);
+                } else {
+                    console.log(xmlhttp.status);
                 }
             }
             xmlhttp.onerror = function() {
@@ -36,7 +50,59 @@ var loadJson = function(currentClassIndex){
         );
 }
 
-loadJson(0);
+var loadPackageInfoJson = function(){
+    return new Promise(
+        function(resolve, reject) {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.open('GET', packageInfoPath, true);
+            xmlhttp.onload = function() {
+                if (xmlhttp.status === 200) {
+                    jsonData = JSON.parse(xmlhttp.responseText);
+                    console.log(jsonData.length);
+                    loadSidebar(jsonData);
+                    loadGuessesJson(0);
+                }
+            }
+            xmlhttp.onerror = function() {
+                Error('Data didn\'t load successfully; error code:' + request.statusText);
+            }
+            xmlhttp.send();
+        }
+        );
+}
+
+loadPackageInfoJson();
+
+var loadSidebar = function(jsonData) {
+    console.log(jsonData.packages);
+    loadPackages(jsonData.packages);
+}
+
+var loadPackages = function(jsonPackagesArray) {
+    for (var i = 0; i < jsonPackagesArray.length; i++) {
+        options.push(jsonPackagesArray[i].name);
+        var pText = document.createElement('p');
+        pText.innerHTML = jsonPackagesArray[i].name;
+        pText.innerHTML += '  0/' + jsonPackagesArray[i].classes.length;        
+        var pTextXml = new XMLSerializer().serializeToString(pText);
+        document.getElementById('packages').innerHTML += pTextXml;
+        //var classesDivXml = loadClasses(jsonPackagesArray[i].classes);
+        //document.getElementById('packages').innerHTML += classesDivXml;
+    }
+}
+
+var loadClasses = function(jsonClassesArray) {
+    var classesDiv = document.createElement('div');
+    classesDiv.setAttribute('class','sub-checkboxes');
+
+    for (var i = 0; i < jsonClassesArray.length; i++) {
+        var pText = document.createElement('p');
+        pText.innerHTML = jsonClassesArray[i];
+        var pTextXml = new XMLSerializer().serializeToString(pText);
+    }
+    return new XMLSerializer().serializeToString(classesDiv);
+}
+
 
 var randomSeed = function(x) {
     return Math.floor((Math.random() * x));
@@ -65,9 +131,9 @@ var buildQuest = function(currentQuest) {
 var buildParagraphPackage = function() {
     var guessClassSelect = document.createElement('select');
     guessClassSelect.setAttribute('id', 'guessDropdown');
-    guessClassSelect.setAttribute('name', 'classes');
+    guessClassSelect.setAttribute('name', 'package');
     guessClassSelect.setAttribute('size', '1');
-    guessClassSelect.setAttribute('onchange', 'selectPackageClass()');
+    guessClassSelect.setAttribute('onchange', 'selectPackage()');
     for (var i = 0; i < options.length; i++) {
         var guessClassSelectOption = document.createElement('option');
         guessClassSelectOption.innerHTML = options[i];
@@ -77,8 +143,9 @@ var buildParagraphPackage = function() {
 
     }
     var guessClassSelectXml = new XMLSerializer().serializeToString(guessClassSelect);
-    document.getElementById('package').innerHTML = currentPackage.join('.') + '.';
-    document.getElementById('package').innerHTML += guessClassSelectXml;
+    document.getElementById('package').innerHTML = 'java.'
+    document.getElementById('package').innerHTML += guessClassSelectXml + '.';
+    document.getElementById('package').innerHTML += currentClass;
 }
 
 var buildParagraphDescription = function(currentQuest){
@@ -101,10 +168,10 @@ var buildParagraphGuess = function(currentQuest) {
     document.querySelector('input.focus').focus();
 }
 
-var selectPackageClass = function(){
+var selectPackage = function(){
     var selectBox = document.getElementById("guessDropdown");
     var selectedValue = selectBox.options[selectBox.selectedIndex].value;
-    loadJson(selectedValue);
+    loadGuessesJson(selectedValue);
 }
 
 var blankResult = function() {

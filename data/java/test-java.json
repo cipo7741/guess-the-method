@@ -1,0 +1,85 @@
+{
+    "packages" : [
+        {
+            "name" : "io",
+            "classes" : [
+                "File"
+            ]
+        },
+        {
+            "name" : "lang",
+            "classes" : [
+                "Math"
+            ],
+            "superclasses" : [
+                {
+                    "name" : "Number",
+                    "classes" : [
+                        "Double",
+                        "Integer",
+                        "Long"
+                    ]
+                }
+            ]
+        },
+        {
+            "name" : "util",
+            "classes" : [
+                "Math",
+                "ArrayList",
+                "Arrays",
+                "Calendar",
+                "Collection",
+                "Collections",
+                "Comparator",
+                "Date",
+                "Enumeration",
+                "HashMap",
+                "HashSet",
+                "Iterator",
+                "LinkedHashMap",
+                "LinkedList",
+                "List",
+                "Locale",
+                "Map",
+                "Properties",
+                "Random",
+                "Set",
+                "UUID"
+            ],
+            "packages" : [
+                {
+                    "name" : "concurrent",
+                    "classes" : [
+                        "ConcurrentHashMap",
+                        "Executors",
+                        "ExecutorService",
+                        "TimeUnit"
+                    ]
+                },
+                {
+                    "name" : "logging",
+                    "classes" : [
+                        "Logger"
+                    ]
+                },
+                {
+                    "name" : "regex",
+                    "classes" : [
+                        "Matcher",
+                        "Pattern"
+                    ]
+                }
+            ],
+            "superclasses" : [
+                {
+                    "name" : "Map",
+                    "classes" : [
+                        "Entry"
+                    ]
+                }
+            ]
+
+        }
+    ]
+}
